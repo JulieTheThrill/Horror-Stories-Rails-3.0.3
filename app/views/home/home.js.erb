@@ -1,0 +1,43 @@
+ var settinggraveup = false;
+  
+  function animateGrave(){
+      if(settinggraveup==true){
+         $('#grave-setting').animate({
+          marginTop: "0px" 
+          }, 500, function() {
+          settinggraveup = false;
+        });
+      } else {
+      	$('#grave-setting').hide();
+        $('#grave-setting').animate({
+            marginTop: "-20px" 
+          }, 500, function() {
+          settinggraveup = true;
+        });
+      }
+      
+  }   
+  
+  $("img").bind("fadeToggle", function() {
+
+	    // Negate the current value of the fadeIn object in this element's data store
+	    // Initial fire will set value to !null (which == true)
+	    $(this).data("fadeIn", !$(this).data("fadeIn"));
+	
+	    // Create a callback function to recursively trigger the event at the end of either animation
+	    var callback = function() {
+	        $(this).trigger("fadeToggle");
+	    };
+	
+	    // Test the value in the data store
+	    if ($(this).data("fadeIn")) {
+	
+	        // Fade in and trigger the next fadeToggle event
+	        $(this).fadeIn("slow", callback);
+	    } else {
+	
+	        // Fade out and trigger the next fadeToggle event
+	        $(this).fadeOut("slow", callback);
+	    }
+	}).trigger("fadeToggle"); // Trigger first event to start the chain
+  

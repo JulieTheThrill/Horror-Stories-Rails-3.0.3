@@ -1,0 +1,16 @@
+<div id="read-single-story">
+	<%= render 'shared/navigation' %>
+	  <div id="scrollbar-story">
+		<div class="scrollbar"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>
+		<div class="viewport">
+			 <div class="overview">
+				  <div id="single-story">
+					  <%= @story.body %>
+				  </div>
+			</div>
+		</div>
+		</div>
+	  <div id="choose-another">
+		<%= link_to image_tag("blank.png", :width=>258, :height=>20), stories_path %>
+	</div>
+</div>

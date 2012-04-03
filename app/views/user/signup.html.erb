@@ -1,0 +1,19 @@
+<%= form_for :user do |f| %>
+
+	<%= error_messages_for :user %><br/>
+	
+	<label for="user_login">Username</label><br/>
+	<%= f.text_field :login, :size => 20 %><br/>
+	
+	<label for="user_password">Password</label><br/>
+	<%= f.password_field :password, :size => 20 %><br/>
+	
+	<label for="user_password_confirmation">Password Confirmation</label><br/>
+	<%= f.password_field :password_confirmation, :size => 20 %><br/>
+	
+	<label for="user_email">Email</label><br/>
+	<%= f.text_field :email,  :size => 20 %><br/>
+	
+	<%= f.submit %>
+
+<% end %>

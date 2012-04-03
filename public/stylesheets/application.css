@@ -1,0 +1,663 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require_self
+ *= require_tree . 
+*/
+
+
+/*Background: 800px X 552px Was 696px X 472px multiplied by 1.15 or add 104 for height and 80 for width*/
+body {
+  font: 0.8em/21px verdana;
+	background:#000;
+}
+
+img{
+	border:none;
+}
+
+a {
+	text-decoration:none;
+	border:none;
+}
+
+.upload-form{
+	background:#fff;
+	width:300px;
+	margin:auto;
+}
+
+#main {
+	height:552px;
+	width: 800px;
+	margin: 50px auto;
+}
+
+
+#wrapper{
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	width:800px;
+	margin: 70px auto 0 auto;
+}
+
+
+
+/*****************VIDEOS*********************/
+
+#upload-videos{
+  background-image:url('../images/../images/upload-page/background.png');
+  height:549px;
+  width: 800px;
+  margin: 50px auto;
+}
+
+.video-submit{
+  margin:23px 0 0 390px;
+  width:240px;
+  height:13px;
+  background-image:url('../images/../images/upload-page/submit.png');
+}
+
+.video-submit:hover{
+  background-position:-241px;
+}
+
+#single-video{
+  background-image:url('../images/../images/share-videos-page/single-background.png');
+  height:550px;
+  width: 800px;
+  margin: 50px auto;
+}
+
+#video-graves{
+  margin-top:31px;
+  margin-left:185px;
+}
+
+#choose-another-vid{
+  position:absolute;
+  margin:300px 0 0 520px;
+}
+
+#choose-another-vid a{
+  position:absolute;
+  background:url('../images/share-videos-page/choose-another.png') no-repeat 516px 20px;
+}
+
+#choose-another-vid a:hover{
+  background-position:-258px 0; 
+}
+
+#upload-form{
+  position:absolute;
+  margin:337px 0 0 115px;
+  color:#fff;
+}
+
+#upload-form #video-link input{
+  background-color:transparent;
+  border:none;
+}
+
+#videos{
+  margin-left:489px;
+  margin-top:276px;
+  height:138px;
+  width:273px;
+  position:absolute;
+}
+
+#enter-youtube-id a{
+  margin:387px 0 0 290px;
+  position:absolute;
+  background: url('../images/upload-page/youtube-id.png') no-repeat 880px 12px;
+  text-decoration:none;
+}
+
+#enter-youtube-id a:hover{
+  background-position:-440px 0; 
+}
+
+#success{
+  background: url('../images/upload-page/success.png') no-repeat;
+  height:550px;
+  width: 800px;
+  margin: 50px auto;
+}
+
+#success-button a{
+  margin:280px 0 0 65px;
+  position:absolute;
+  background: url('../images/upload-page/success-button.png') no-repeat 438px 15px;
+  text-decoration:none;
+}
+
+#success-button a:hover{
+  background-position:-219px ;
+}
+
+#fail{
+  background: url('../images/upload-page/fail.png') no-repeat;
+  height:550px;
+  width: 800px;
+  margin: 50px auto;
+}
+
+#fail-button a{
+  margin:284px 0 0 107px;
+  position:absolute;
+  background: url('../images/upload-page/fail-button.png') no-repeat 379px 32px;
+  text-decoration:none;
+}
+
+#fail-button a:hover{
+  background-position:-189px ;
+}
+
+
+/*********************USER********************/
+.admin{
+  color:#fff;
+  padding:15px;
+  height:auto;
+  width: 800px;
+  margin: 50px auto;
+  line-height:1.1em;
+}
+
+.admin a{
+  color:#cc0033;
+}
+
+.admin a:visited{
+  color:#cc0033;
+}
+
+.admin a:hover{
+  color:#fff;
+}
+
+#admin-videos{
+  width:250px;
+  position:absolute;
+}
+
+#admin-stories{
+  margin-left:350px;
+  width:250px;
+  position:relative;
+}
+
+#notice_message{
+  border:3px solid #cc0033;
+  font-size:1.3em;
+  margin-bottom:15px;
+  padding:10px;
+  width:auto;
+}
+
+/**********************Stories*************************/
+#read-stories{
+  background-image:url('../images/read-page/background.png');
+  height:550px;
+  width: 800px;
+  margin: 50px auto;
+}
+
+#read-single-story{
+  background-image:url('../images/read-page/single-background.png');
+  height:548px;
+  width: 800px;
+  margin: 50px auto;
+}
+
+#choose-another{
+  position:absolute;
+  margin:500px 0 0 435px;
+}
+
+#choose-another a{
+  position:absolute;
+  background:url('../images/read-page/choose-another.png') no-repeat 516px 20px;
+}
+
+#choose-another a:hover{
+  background-position:-258px 0; 
+}
+
+#single-story{
+  overflow:auto;
+  width:371px;
+  height:335px;
+  margin:150px 0 0 265px;
+  position:absolute;
+  color:#fff;
+}
+
+#stories-list{
+  overflow:auto;
+  width:250px;
+  height:310px;
+  margin:190px 0 0 73px;
+  position:absolute;
+  color:#fff;
+  clear:both;
+}
+
+#stories-list a{
+  color:#fff;
+  text-decoration:none;
+}
+
+#new-story{
+  background-image:url('../images/write-page/background.png');
+  height:552px;
+  width: 800px;
+  margin: 50px auto;
+}
+
+#story-nav{
+  padding-top:8px;
+}
+
+#story-text-field{
+  margin:170px 0 0 430px;
+  position:absolute;
+}
+
+#story-text-field textarea{
+  resize:none;
+  background-color:transparent;
+  border:none;
+  font-family:verdana;
+}
+
+.story-submit{
+  margin:476px 0 0 615px;
+  width:130px;
+  height:10px;
+  position:absolute;
+  background-image:url('../images/write-page/submit.png');
+}
+
+.story-submit:hover{
+  background-position:-130px;
+}
+
+
+/*---------------Navigation------------*/
+
+#navigation{
+  position:absolute;
+  margin:81px 0 0 12px;
+  width:340px;
+  height:50px;
+}
+
+#navigation a{
+  text-decoration:none;
+  background:none;
+}
+
+#navigation #view a{
+  position:absolute;
+  margin-right:7px;
+  background:url('../images/view-button.png') no-repeat 688px 14px;
+}
+
+#navigation #view a:hover{
+  background-position:-231px 0; 
+}
+
+#navigation #view-select{
+  position:absolute;
+  margin-right:7px;
+  background:url('../images/view-button.png') no-repeat 688px 14px;
+  background-position:-462px -1px;
+}
+
+#navigation #upload a{
+  position:absolute;
+  margin:1px 0 0 237px;
+  background:url('../images/upload-button.png') no-repeat 501px 14px;
+}
+
+#navigation #upload a:hover{
+  background-position:-167px 0; 
+}
+
+#navigation #upload-select{
+  position:absolute;
+  margin:1px 0 0 237px;
+  background:url('../images/upload-button.png') no-repeat 501px 14px;
+  background-position:-334px -1px;
+}
+
+#navigation #write a{
+  position:absolute;
+  margin:20px 0 0 15px;
+  background:url('../images/write-button.png') no-repeat 574px 14px;
+}
+
+#navigation #write a:hover{
+  background-position:-194px 0; 
+}
+
+#navigation #write-select{
+  position:absolute;
+  margin:20px 0 0 15px;
+  background:url('../images/write-button.png') no-repeat 574px 14px;
+  background-position:-388px -1px;
+}
+
+#navigation #read a{
+  position:absolute;
+  margin:19px 0 0 210px;
+  background:url('../images/read-button.png') no-repeat 585px 14px;
+}
+
+#navigation #read a:hover{
+  background-position:-196px 0; 
+}
+
+#navigation #read-select {
+  position:absolute;
+  margin:19px 0 0 210px;
+  background:url('../images/read-button.png') no-repeat 585px 14px;
+  background-position:-393px 0; 
+}
+
+#navigation #create a{
+  position:absolute;
+  margin:38px 0 0 177px;
+  background:url('../images/create-button.png') no-repeat 689px 16px;
+}
+
+#navigation #create a:hover{
+  background-position:-228px 0; 
+}
+
+#navigation #create-select{
+  position:absolute;
+  margin:38px 0 0 177px;
+  background:url('../images/create-button.png') no-repeat 689px 16px;
+  background-position:-460px;
+}
+
+#poison{
+  height:549px;
+  width: 800px;
+  background-image: url('../images/poison-page/background.png');
+}
+
+
+/*---------------Credits Page------------*/
+
+#credits{
+  height:550px;
+  width: 800px;
+  background-image: url('../images/credits-page/background.png');
+}
+
+#credits a{
+  text-decoration:none;
+  background:none;
+}
+
+#credits-enter a{
+  margin:240px 0 0 615px;
+  width:149px;
+  height:24px;
+  position:absolute;
+  background: url('../images/credits-page/credits_enter.png') no-repeat;
+}
+
+#credits-enter a:hover{
+  background-position:-149px 0; 
+}
+
+#preloaded-background { 
+  background: url('../images/collage-page/play-background.png') no-repeat -9999px -9999px; 
+}
+
+#videos-list{
+  position:absolute;
+  margin:126px 0 0 470px;
+  height:384px;
+  width:193px;
+  overflow:auto;
+}
+
+#videos-list a{
+  text-decoration:none;
+  color:#fff;
+}
+
+
+#facebook{
+  margin-top:323px;
+  margin-left:250px;
+  position:absolute;
+}
+
+
+#roller-coaster{
+  margin: 421px 0 0 177px;  
+  position:absolute;
+}
+
+.collage-submit{
+  position:absolute;
+  margin:268px 0 0 486px;
+  height:15px;
+  width:62px;
+  background-image:url('../images/collage-page/start-button.png');
+}
+
+.collage-submit:hover{
+  background-position:-62px;
+}
+
+#collage-title input{
+  margin:209px 0 0 597px;
+  background-color:transparent;
+  border:none;
+  position:absolute;
+}
+
+
+#share-button{
+  position:absolute;
+  margin:500px 0 0 580px; 
+  z-index:1;
+  visibility:hidden;
+}
+
+#share-button a{
+  text-decoration:none;
+  background:url('../images/collage-page/share-button.png') no-repeat 366px 15px;
+}
+
+#share-button a:hover{
+  background-position:-183px 0; 
+}
+
+
+#share-videos{
+  background-image:url('../images/share-videos-page/background.png');
+  height:550px;
+  width: 800px;
+  margin: 50px auto;
+}
+
+#share-videos-nav{
+  padding-top:25px;
+}
+
+#player{
+  position:absolute;
+}
+
+#end-video-image{
+  position:absolute;
+  visibility: hidden;
+}
+
+#background-mask{
+  margin-top:549px;
+  position:absolute;
+  z-index:10;
+  background: url('../images/collage-page/background-mask.jpg') repeat 800px 50px;
+}
+
+#collage{
+  height:552px;
+  width: 800px; 
+  background-image: url('../images/collage-page/background.jpg');
+}
+
+#share-collage{
+  height:534px;
+  width: 800px; 
+  background-image: url('../images/collage-page/share-background.png');
+}
+
+#sound-buttons{
+  position:absolute;
+  margin:278px 0 0 230px;
+  visibility:hidden;
+}
+
+/*---------------Radio buttons------------*/
+
+#sound-buttons .radio{
+  margin-top:6px;
+  width: 12px;
+  height: 12px;
+  background: url('../images/check-sound.png') no-repeat;
+  display: block;
+  clear: left;
+  float: left; 
+}
+
+
+.checkbox, .radio {
+  width: 12px;
+  height: 12px;
+  background: url('../images/sound-buttons/check.png') no-repeat;
+  display: block;
+  clear: left;
+  float: left;
+}
+.radio {
+  background: url('../images/sound-buttons/radio.png') no-repeat;
+}
+.select {
+  position: absolute;
+  width: 158px; /* With the padding included, the width is 190 pixels: the actual width of the image. */
+  height: 21px;
+  padding: 0 24px 0 8px;
+  color: #fff;
+  font: 12px/21px arial,sans-serif;
+  background: url('../images/styled-radio-button-clicked.png') no-repeat;
+  overflow: hidden;
+}
+
+/*---------------Graves------------*/
+
+.graves-options{
+  z-index:3;
+  width:100px;
+  position:absolute;  
+}
+
+#setting-categories{
+    margin-left:7px;
+    margin-top: 26px;
+    visibility:hidden;
+}
+
+#monsters-categories{
+    margin-left:100px;
+    margin-top: 19px; 
+    visibility:hidden;
+}
+
+#weather-categories{
+    margin-left:175px;
+    margin-top: 24px;
+    visibility:hidden;
+}
+
+#creatures-categories{
+    margin-left:259px;
+    margin-top: 27px;
+    visibility:hidden;
+}
+
+#blood-categories{
+    margin-left:345px;
+    margin-top: 25px;
+    visibility:hidden;
+}
+
+#victims-categories{
+    margin-left:423px;
+    margin-top: 27px; 
+    visibility:hidden;
+}
+
+.graves{
+  z-index:2;
+  width:100px;
+  margin-top:30px;
+  display:inline-block;
+  position:absolute;
+}
+
+.graves img{
+  cursor:pointer;
+}
+
+.graves a:hover{
+  text-decoration:none;
+  background:none;
+}
+
+#graves-holder{
+  margin-top:440px;
+  margin-left:305px;
+  position:absolute;
+}
+
+#graves-container{
+  visibility:hidden;
+}
+
+#grave-setting{
+  margin-left:0px;
+}
+
+#grave-monsters{
+  margin-left:88px; 
+}
+
+#grave-weather{
+  margin-left:157px; 
+}
+
+#grave-creatures{
+  margin-left:253px; 
+}
+
+#grave-blood{
+  margin-left:335px; 
+}
+
+#grave-victims{
+  margin-left:415px; 
+}

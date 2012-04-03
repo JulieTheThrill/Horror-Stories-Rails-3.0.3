@@ -1,0 +1,32 @@
+<div id="single-video">
+	<div id="nav">
+		<%= render 'shared/navigation' %>
+	</div>
+	
+	<div id="choose-another-vid">
+		<%= link_to image_tag("blank.png", :width=>258, :height=>20), videos_path %>
+	</div>
+	
+	<!---
+<p>
+  <b>Title:</b>
+  <%= @video.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @video.description %>
+</p>
+
+<p>
+  <b>Categories</b> <br />
+  	<% @categories.each do |category| %>
+  		<% @cat = @video.categories.detect{|d| d == category} %>
+  		<% if not @cat.nil? %>
+  			<%= @cat.display_name %>
+  		<br/> 
+  		<% end %>
+  	<% end %>
+  </div>
+ -->
+</div>

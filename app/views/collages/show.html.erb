@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<h2>Categories</h2>
+<% @collage.categories.each do |cat| %>
+	<%= cat.name.split('_')[0] %>: <%= cat.name.split('_')[1] %><br />
+<% end %><br />
+			
+			
+
+<h2>Videos</h2>
+<% count = 1 %>
+<% @collage.videos.each do |video| %>
+	<%= count %>
+	<%= video.title %> 
+		
+	(<% video.categories.each do |cat| %>
+		<%= cat.name.split('_')[0] %>: <%= cat.name.split('_')[1] %>
+	<% end %>)<br />
+	<% count += 1%>
+<% end %>
+
+
+<%= link_to 'Edit', edit_collage_path(@collage) %> |
+<%= link_to 'Back', collages_path %>

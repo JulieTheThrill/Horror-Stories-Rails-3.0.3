@@ -1,0 +1,10 @@
+<div id="share-videos">
+	<%= render 'shared/navigation' %>
+	<div id="videos-list">
+		<% @collages.each do |collage| %>
+			<%= collage.created_at.strftime("%b %d")  %>
+		    <%= link_to truncate(collage.title, :length => 20), collage %>
+		    <br /><br />
+		<% end %>
+	</div>
+</div>

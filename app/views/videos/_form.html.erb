@@ -1,0 +1,34 @@
+<%= link_to 'Delete Video', @video, confirm: 'Are you sure?', method: :delete %> |
+<%= link_to 'Return to Admin', :controller => "user", :action => "welcome"  %>
+
+<%= form_for @video do |f| %>
+
+<p>Youtube ID: <%= f.text_field :title %></p>
+
+<h3>Categories</h3>
+
+	<% last = "none" %>
+	<% @categories.each do |category| %>
+		<% cat = category.name.split('_')[0]
+			name = category.name.split('_')[1] %>
+			
+				<% if cat != last %>
+					<% if last != "none" %>
+						<br />
+					<% end %>
+				<% end %> 
+			<% last = cat %>
+	
+			<% if name != "random"%>
+				<%= check_box_tag(
+		                        "video[category_list][#{category.id}]", 
+		                        "1", 
+		                        @video.categories.detect{|d| d == category}, :class => "styled") %>
+		                     
+				<%= name %><br />
+			<% end %>
+	<% end %>
+	
+	<%= f.submit %>
+<% end %>
+	

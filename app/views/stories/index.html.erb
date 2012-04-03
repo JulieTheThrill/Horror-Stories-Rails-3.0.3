@@ -1,0 +1,25 @@
+<div id="read-stories">
+	<%= render 'shared/navigation' %>
+	
+	<div id="stories-list">
+		<% @stories.each do |story| %>
+			<% created = story.created_at.strftime("%d") %> 
+				<% if created[1] == "1" %>
+					<% created = created + "ST" %>
+				<% elsif created[1] == "2" %>
+					<% created = created + "ND" %>
+				<% elsif created[1] == "3" %>
+					<% created = created + "RD" %>
+				<% else %> 
+					<% created = created + "TH" %>
+				<% end	%>
+				
+				<% if created[0] == "0"%>
+					<% created = created[1..created.length] %>
+				<% end %>
+			<%= story.created_at.strftime("%B ").upcase  %>
+			<%= created %> <br />
+			<%= link_to truncate(story.body, :length => 30), story %><br /><br />
+		<% end %>
+	</div>                   
+</div>

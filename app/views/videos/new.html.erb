@@ -1,0 +1,40 @@
+<div id="upload-videos">
+
+	<div id="background-mask">
+		<%= image_tag("blank.png", :width=>800, :height=>50) %>
+	</div>
+	
+	<%= render 'shared/navigation' %>
+	<div id="upload-form">
+		<%= form_for @video do |f| %>
+		  <% if @video.errors.any? %>
+		    <div id="error_explanation">
+		      <h2><%= pluralize(@video.errors.count, "error") %> prohibited this video from being saved:</h2>
+		
+		      <ul>
+		      <% @video.errors.full_messages.each do |msg| %>
+		        <li><%= msg %></li>
+		      <% end %>
+		      </ul>
+		    </div>
+		  <% end %>
+		
+		  <div class="field" id='video-link'>
+		    <%= f.text_field :title, :size => 25 %>
+		  </div>
+		  <div class="actions" >
+		    <%= image_submit_tag('blank.png', :class => 'video-submit') %>
+		  </div>
+		<% end %>
+		  <div id="video-graves">
+			<%= render 'shared/graves' %> 
+		  </div>
+	</div>
+
+</div>
+
+<script type="text/javascript">
+		
+		raiseGraves();
+		
+</script>
