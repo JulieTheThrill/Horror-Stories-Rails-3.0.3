@@ -1,6 +1,5 @@
 var player;
 
-
 var tag = document.createElement('script');
 tag.src = "http://www.youtube.com/player_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
@@ -10,11 +9,10 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 $('#end-video-image').css('visibility', 'hidden');
 $('#new_collage').css('visibility', 'hidden');
 $('#sound-buttons').css('visibility', 'visible'); 
-$('#collage').css('background-image', "url(../assets/collage-page/play-background.png)");  
+$('#collage').css('background-image', "url(../images/collage-page/play-background.png)");  
 lowerGraves();
 stopCoaster();
 
-// This function creates an <iframe> (and YouTube player) after the API code downloads.
 function onYouTubePlayerAPIReady() {
 	player = new YT.Player('player', {
 	      height: '138',
@@ -29,7 +27,6 @@ function onYouTubePlayerAPIReady() {
     });
 }
   
-// The API will call this function when the video player is ready.
 function onPlayerReady(event) {
 	 if (player) {
 	 	player.mute();
@@ -37,7 +34,6 @@ function onPlayerReady(event) {
 	  }
 }
   
-var done = false;
 function onPlayerStateChange(event) {
     if (event.data == YT.PlayerState.ENDED) {
     	$('#player').css('visibility', 'hidden');  

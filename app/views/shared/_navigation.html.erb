@@ -1,9 +1,9 @@
 <div id="navigation">
 	<div id="view<% if current_page?(:controller => 'collages', :action => 'index')%><%= "-select"%><%end%>">
 		<% if current_page?(:controller => 'collages', :action => 'index')%>
-			<%= image_tag("blank.png", :width=>229, :height=>17) %>
+			<%= image_tag("blank.png", :width=>231, :height=>14) %>
 		<% else %>
-			<%= link_to image_tag("blank.png", :width=>229, :height=>17), collages_path %>
+			<%= link_to image_tag("blank.png", :width=>231, :height=>14), collages_path %>
 		<% end %>
 	</div><!--/view-->
 	<div id="upload<% if current_page?(:controller => 'videos', :action => 'new')%><%= "-select"%><%end%>">
@@ -15,9 +15,9 @@
 	</div><!--/upload-->
 	<div id="write<% if current_page?(:controller => 'stories', :action => 'new')%><%= "-select"%><%end%>">
 		<% if current_page?(:controller => 'stories', :action => 'new')%>
-			<%= image_tag("blank.png", :width=>193, :height=>17) %>
+			<%= image_tag("blank.png", :width=>193, :height=>14) %>
 		<% else %>
-			<%= link_to image_tag("blank.png", :width=>193, :height=>17), new_story_path %>
+			<%= link_to image_tag("blank.png", :width=>193, :height=>14), new_story_path %>
 		<% end %>
 	</div><!--/write-->
 	<div id="read<% if current_page?(:controller => 'stories', :action => 'index')%><%= "-select"%><%end%>">

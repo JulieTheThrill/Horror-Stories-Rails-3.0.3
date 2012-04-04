@@ -9,7 +9,7 @@
 
 /*Background: 800px X 552px Was 696px X 472px multiplied by 1.15 or add 104 for height and 80 for width*/
 body {
-  font: 0.8em/21px verdana;
+  font: 0.8em/13px verdana;
 	background:#000;
 }
 
@@ -49,17 +49,17 @@ a {
 /*****************VIDEOS*********************/
 
 #upload-videos{
-  background-image:url('../images/../images/upload-page/background.png');
+  background-image:url('../images/upload-page/background.png');
   height:549px;
   width: 800px;
   margin: 50px auto;
 }
 
 .video-submit{
-  margin:23px 0 0 390px;
+  margin:39px 0 0 390px;
   width:240px;
   height:13px;
-  background-image:url('../images/../images/upload-page/submit.png');
+  background-image:url('../images/upload-page/submit.png');
 }
 
 .video-submit:hover{
@@ -67,7 +67,7 @@ a {
 }
 
 #single-video{
-  background-image:url('../images/../images/share-videos-page/single-background.png');
+  background-image:url('../images/share-videos-page/single-background.png');
   height:550px;
   width: 800px;
   margin: 50px auto;
@@ -85,7 +85,7 @@ a {
 
 #choose-another-vid a{
   position:absolute;
-  background:url('../images/share-videos-page/choose-another.png') no-repeat 516px 20px;
+  background:url('../images/share-videos-page/choose-another.png') no-repeat 516px 20px;  
 }
 
 #choose-another-vid a:hover{
@@ -306,7 +306,9 @@ a {
 #navigation #view a{
   position:absolute;
   margin-right:7px;
-  background:url('../images/view-button.png') no-repeat 688px 14px;
+  background:url('../images/view-button.png') no-repeat;
+  width:231px;
+  height:14px;
 }
 
 #navigation #view a:hover{
@@ -316,14 +318,18 @@ a {
 #navigation #view-select{
   position:absolute;
   margin-right:7px;
-  background:url('../images/view-button.png') no-repeat 688px 14px;
+  background:url('../images/view-button.png') no-repeat;
   background-position:-462px -1px;
+  height:14px;
+  width:231px;
 }
 
 #navigation #upload a{
   position:absolute;
   margin:1px 0 0 237px;
-  background:url('../images/upload-button.png') no-repeat 501px 14px;
+  background:url('../images/upload-button.png') no-repeat;
+  height:14px;
+  width:167px;
 }
 
 #navigation #upload a:hover{
@@ -333,14 +339,18 @@ a {
 #navigation #upload-select{
   position:absolute;
   margin:1px 0 0 237px;
-  background:url('../images/upload-button.png') no-repeat 501px 14px;
+  background:url('../images/upload-button.png') no-repeat;
   background-position:-334px -1px;
+  height:14px;
+  width:167px;
 }
 
 #navigation #write a{
   position:absolute;
   margin:20px 0 0 15px;
-  background:url('../images/write-button.png') no-repeat 574px 14px;
+  background:url('../images/write-button.png') no-repeat;
+  height:14px;
+  width:193px;
 }
 
 #navigation #write a:hover{
@@ -350,14 +360,18 @@ a {
 #navigation #write-select{
   position:absolute;
   margin:20px 0 0 15px;
-  background:url('../images/write-button.png') no-repeat 574px 14px;
+  background:url('../images/write-button.png') no-repeat;
   background-position:-388px -1px;
+  height:14px;
+  width:194px;
 }
 
 #navigation #read a{
   position:absolute;
   margin:19px 0 0 210px;
-  background:url('../images/read-button.png') no-repeat 585px 14px;
+  background:url('../images/read-button.png') no-repeat;
+  height:14px;
+  width:196px;
 }
 
 #navigation #read a:hover{
@@ -367,14 +381,18 @@ a {
 #navigation #read-select {
   position:absolute;
   margin:19px 0 0 210px;
-  background:url('../images/read-button.png') no-repeat 585px 14px;
+  background:url('../images/read-button.png') no-repeat;
   background-position:-393px 0; 
+  height:14px;
+  width:196px;
 }
 
 #navigation #create a{
   position:absolute;
   margin:38px 0 0 177px;
-  background:url('../images/create-button.png') no-repeat 689px 16px;
+  background:url('../images/create-button.png') no-repeat;
+  height:16px;
+  width:229px;
 }
 
 #navigation #create a:hover{
@@ -384,8 +402,10 @@ a {
 #navigation #create-select{
   position:absolute;
   margin:38px 0 0 177px;
-  background:url('../images/create-button.png') no-repeat 689px 16px;
+  background:url('../images/create-button.png') no-repeat;
   background-position:-460px;
+  height:16px;
+  width:229px;
 }
 
 #poison{
@@ -479,7 +499,9 @@ a {
 
 #share-button a{
   text-decoration:none;
-  background:url('../images/collage-page/share-button.png') no-repeat 366px 15px;
+  background:url('../images/collage-page/share-button.png') no-repeat;
+  height:15px;
+  width:183px;
 }
 
 #share-button a:hover{
@@ -534,6 +556,7 @@ a {
 
 /*---------------Radio buttons------------*/
 
+
 #sound-buttons .radio{
   margin-top:6px;
   width: 12px;
@@ -548,13 +571,13 @@ a {
 .checkbox, .radio {
   width: 12px;
   height: 12px;
-  background: url('../images/sound-buttons/check.png') no-repeat;
+  background: url('../images/check.png') no-repeat;
   display: block;
   clear: left;
   float: left;
 }
 .radio {
-  background: url('../images/sound-buttons/radio.png') no-repeat;
+  background: url('../images/radio.png') no-repeat;
 }
 .select {
   position: absolute;

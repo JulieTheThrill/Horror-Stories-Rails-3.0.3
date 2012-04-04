@@ -34,7 +34,7 @@ class CollagesController < ApplicationController
       format.html # new.html.erb
       format.json { render :json => @collage }
     end
-  end
+  end  
 
   # GET /collages/1/edit
   def edit
@@ -45,7 +45,6 @@ class CollagesController < ApplicationController
   # POST /collages.json
   def create
     @collage = Collage.new(params[:collage])
-    
 
     respond_to do |format|
       if @collage.save
@@ -87,6 +86,9 @@ class CollagesController < ApplicationController
   end
   
   def share
+    respond_to do |format|
+      UserMailer.share_collage("julielgill@gmail.com").deliver
+    end
   end
   
   def get_all_categories

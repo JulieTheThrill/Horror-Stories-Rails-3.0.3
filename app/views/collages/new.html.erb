@@ -32,7 +32,7 @@
 	
 	<%= render "shared/navigation" %>
 	
-	<%= form_for @collage, :remote => true do |f| %>
+	<%= form_for(@collage, :remote => true) do |f| %>
 	
 		<div class="field" id='collage-title'>
 		    <%= f.text_field :title, :size => 25 %>

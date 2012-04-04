@@ -1,14 +1,14 @@
 <div id="graves-container">
 	<% isUpload = current_page?(:controller => 'videos', :action => 'new')
 	last = "none" 
-	last_id = 3 %>
+	last_id = 1 %>
   	<% @categories.each do |category| %>
 		<% cat = category.name.split('_')[0]
 			name = category.name.split('_')[1] %>
 				<% if cat != last %>
 					<% if last != "none" %>
 						</div>		
-						<% last_id = category.id %> 
+						<% last_id = 1 %> 
 					<% end %> 
 		  			<div id="grave-<%= cat %>" class="graves">
 						<a href="#" onclick="animateGrave('<%= cat %>'); return false;">
@@ -18,22 +18,24 @@
 					<div class="graves-options" id="<%= cat %>-categories">
 				<% end %>
 				<% if isUpload and name != "random" %> 
-					<% id = category.id - last_id + 1 %>
+					<% id = last_id %>
 					<%= check_box_tag(
 		              "video[category_list][#{category.id}]", "1", 
 		              false, 
 		              :class => "styled", :onClick => "radioGraves('#{cat}', '#{name}', '#{id}');") %>
 					<%= label_tag "video[category_list][#{category.id}]", image_tag("graves/#{cat}/#{cat}-cat#{id}.png", :height=>category.height) %><br />
 					<% last = cat %>
+					<% last_id += 1 %>
 				<% elsif not isUpload %> 
-					<% id = category.id - last_id + 1 %>
+					<% id = last_id %>
 					<%= check_box_tag(
 		              "collage[collage_category_list][#{category.id}]", "1", 
 		              false, 
 		              :class => "styled") %>
 					<%= label_tag "collage[collage_category_list][#{category.id}]", image_tag("graves/#{cat}/#{cat}-cat#{id}.png", :height=>category.height) %><br />
 					<% last = cat %>
-				<% end %> <!-- end don't print out 'random' if uploading a video -->
-  	<% end %><!-- end categories.each -->
+					<% last_id += 1 %>
+				<% end %>
+  	<% end %>
   </div>
 </div>
