@@ -86,13 +86,13 @@ class CollagesController < ApplicationController
   end
   
   def share
-    @collage = Collage.find(:all, :order => "created_at DESC", :limit => 1)
+    @collage = Collage.find(params[:id])
     
     respond_to do |format|
         format.html { render :action => "share" }
     end
   end
-  
+    
   def get_all_categories
       @categories = Category.find(:all)
    end  

@@ -7,7 +7,16 @@ has_and_belongs_to_many :collages
 
   attr_accessor :category_list
   after_save :update_categories
+  before_save :validate_title
   
+  def validate_title    
+    image = Net::HTTP.get_response(URI.parse("http://gdata.youtube.com/feeds/api/videos/" + self.title)).body
+    if(image == 'Invalid id')  
+      return false
+    else 
+      return true
+    end 
+  end
 
   private 
 

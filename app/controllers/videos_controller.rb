@@ -2,7 +2,8 @@ class VideosController < ApplicationController
   before_filter :login_required, :only=>['edit', 'update', 'destroy']
     
     require 'csv'
-    
+    require 'net/http'
+        
   def import
     Video.delete_all
     @cats = [0,0,1,2,3,4,6,7,8,9,10,11,13,14,15,16,17,19,20,21,22,24,25,27,28]
@@ -66,7 +67,8 @@ class VideosController < ApplicationController
   # POST /videos.json
   def create
     @video = Video.new(params[:video])
-
+    
+    
     respond_to do |format|
       if @video.save
          format.html { render :action => "success" }

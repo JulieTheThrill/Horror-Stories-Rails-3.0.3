@@ -12,6 +12,24 @@
 		<div id="player"></div>
 	</div> <!--videos -->
 	
+	<div id="sound-buttons-single">
+		<% sounds = ['off', 'video', 'nature', 'breathing', 'music-box', 'random'] %>
+		<% check = false %>
+		<% sounds.each do |sound|%>
+			<% if sound == "off" %>
+				<% check = true %>
+			<% else %>
+				<% check = false %>
+			<%end%>
+			<%= radio_button_tag(
+		              "sound", "#{sound}", check,
+		              :class => "styled", :onClick => "soundChange('#{sound}');") %>
+		    <%= label_tag "sound_#{sound}", image_tag("collage-page/sound-buttons/sound-#{sound}.png", :height=>16) %><br />
+		<% end %>
+	</div>	
+	
+	<div id="sound-element"></div>
+	
 	<script type="text/javascript">
 	
 		var player;

@@ -198,12 +198,7 @@
 		}
 		
 	}
-	
-	function endSounds(){
-		
-		
-	}
-	    
+		    
        
 /* CUSTOM FORM ELEMENTS
 

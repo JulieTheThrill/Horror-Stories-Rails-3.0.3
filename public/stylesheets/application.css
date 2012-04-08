@@ -143,8 +143,10 @@ a {
 #success-button a{
   margin:280px 0 0 65px;
   position:absolute;
-  background: url('../images/upload-page/success-button.png') no-repeat 438px 15px;
+  background: url('../images/upload-page/success-button.png') no-repeat;
   text-decoration:none;
+  width: 219px;
+  height: 15px;
 }
 
 #success-button a:hover{
@@ -161,8 +163,10 @@ a {
 #fail-button a{
   margin:284px 0 0 107px;
   position:absolute;
-  background: url('../images/upload-page/fail-button.png') no-repeat 379px 32px;
+  background: url('../images/upload-page/fail-button.png') no-repeat;
   text-decoration:none;
+  width;189px;
+  height:32px;
 }
 
 #fail-button a:hover{
@@ -567,10 +571,25 @@ a {
   visibility:hidden;
 }
 
+#sound-buttons-single{
+  position:absolute;
+  margin:350px 0 0 530px;
+}
+
 /*---------------Radio buttons------------*/
 
 
 #sound-buttons .radio{
+  margin-top:6px;
+  width: 12px;
+  height: 12px;
+  background: url('../images/check-sound.png') no-repeat;
+  display: block;
+  clear: left;
+  float: left; 
+}
+
+#sound-buttons-single .radio{
   margin-top:6px;
   width: 12px;
   height: 12px;

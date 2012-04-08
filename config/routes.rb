@@ -23,15 +23,13 @@ HorrorMod::Application.routes.draw do
   get "videos/collage"
   
   get "home/poison"
-  
-  get "collages/share"
-  
+    
   get "stories/adminshow"
   
   get "videos/import"
-  
+    
   resources :collages
-
+  
   resources :stories
   
   resources :home
