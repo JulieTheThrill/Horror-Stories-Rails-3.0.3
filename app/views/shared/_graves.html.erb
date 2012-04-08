@@ -12,30 +12,58 @@
 					<% end %> 
 		  			<div id="grave-<%= cat %>" class="graves">
 						<a href="#" onclick="animateGrave('<%= cat %>'); return false;">
-							<%= image_tag("graves/grave-#{cat}.png", :width=> "#{category.width}", :height=> "116") %>
+							<%= image_tag("graves/grave-#{cat}.png") %>
 						</a>
 					</div>
 					<div class="graves-options" id="<%= cat %>-categories">
 				<% end %>
 				<% if isUpload and name != "random" %> 
 					<% id = last_id %>
+					
+					<% if category.id == 1 or category.id == 11 or category.id == 17 or category.id == 22 or category.id == 25 or category.id == 28%>
+						<% check = true%>
+					<% else %>
+						<% check = false %>
+					<% end %>
+					
 					<%= check_box_tag(
 		              "video[category_list][#{category.id}]", "1", 
-		              false, 
-		              :class => "styled", :onClick => "radioGraves('#{cat}', '#{name}', '#{id}');") %>
+		              check, 
+		              :class => "styled", :onClick => "radioGraves('video', '#{category.id}');") %>
 					<%= label_tag "video[category_list][#{category.id}]", image_tag("graves/#{cat}/#{cat}-cat#{id}.png", :height=>category.height) %><br />
+					
 					<% last = cat %>
 					<% last_id += 1 %>
 				<% elsif not isUpload %> 
 					<% id = last_id %>
+					<% if category.id == 5 or category.id == 12 or category.id == 18 or category.id == 23 or category.id == 26 or category.id == 29%>
+						<% check = true%>
+					<% else %>
+						<% check = false %>
+					<% end %>
 					<%= check_box_tag(
-		              "collage[collage_category_list][#{category.id}]", "1", 
-		              false, 
-		              :class => "styled") %>
-					<%= label_tag "collage[collage_category_list][#{category.id}]", image_tag("graves/#{cat}/#{cat}-cat#{id}.png", :height=>category.height) %><br />
+		              "collage[category_list][#{category.id}]", "1", 
+		              check, 
+		              :class => "styled", :onClick => "radioGraves('collage', '#{category.id}');") %>
+					<%= label_tag "collage[category_list][#{category.id}]", image_tag("graves/#{cat}/#{cat}-cat#{id}.png", :height=>category.height) %><br />
+					
+					
+					
 					<% last = cat %>
 					<% last_id += 1 %>
 				<% end %>
+  	
   	<% end %>
+  	
+  	
+  	
+  	<script type="text/javascript">
+  	
+	
+	</script>
+  	
   </div>
+	
+  
+  
 </div>

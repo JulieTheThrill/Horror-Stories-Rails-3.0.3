@@ -1,4 +1,7 @@
 class StoriesController < ApplicationController
+  
+  before_filter :login_required, :only=>['edit', 'update', 'destroy']
+  
   # GET /stories
   # GET /stories.json
   def index

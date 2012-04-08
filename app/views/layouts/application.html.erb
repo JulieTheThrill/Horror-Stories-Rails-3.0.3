@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <head>
   <title>Horror</title>
+  
+	<meta property="og:title" content="HORROR!!" />
+	<meta property="og:type" content="game" />
+	<meta property="og:image" content="" />
+	<meta property="og:site_name" content="Horror Stories" />
+	<meta property="fb:admins" content="659696400" />
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "jquery.min" %>
   <%= javascript_include_tag "jquery_ujs" %>
@@ -8,9 +14,14 @@
 	<%= favicon_link_tag 'favicon.ico' %>
 	<meta name="csrf-token" content="<%= form_authenticity_token %>" />
 	<meta name="csrf-param" content="authenticity_token" />
+	
 </head>
 <body>
 <div id="main">
+	<% if(session[:user]) %>
+		You are logged in as an Administrator: <%= link_to "Admin Panel", :controller => 'user', :action => 'welcome' %>
+		| <%= link_to "Logout", :controller => 'user', :action => 'logout'%><br />
+	<% end%>
 	<%= yield %>
 </div>
 

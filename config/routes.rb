@@ -28,6 +28,8 @@ HorrorMod::Application.routes.draw do
   
   get "stories/adminshow"
   
+  get "videos/import"
+  
   resources :collages
 
   resources :stories

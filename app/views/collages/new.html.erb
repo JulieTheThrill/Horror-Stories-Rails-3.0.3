@@ -1,3 +1,4 @@
+
 <div id="collage">
 	
 	<div id="background-mask">
@@ -5,8 +6,8 @@
 	</div>
 	
 	<div id="share-button">
-		<%= link_to image_tag("blank.png", :width=>183, :height=>15), { :controller => 'collages' }, 
-			:action => 'share', :confirm => 'Sharing your video will take you away from this page.  Do you want to share?' %>	
+		<%= link_to image_tag("blank.png", :width=>183, :height=>15), {:controller => 'collages', 
+			:action => 'share'}, :confirm => 'Sharing your video will take you away from this page.  Do you want to share?' %>	
 	</div>
 	
 	<div id="sound-buttons">
@@ -35,7 +36,7 @@
 	<%= form_for(@collage, :remote => true) do |f| %>
 	
 		<div class="field" id='collage-title'>
-		    <%= f.text_field :title, :size => 25 %>
+		    <%= f.text_field :title, :size => 25, :onclick => 'clickclear(this, "Untitled")', :onblur => 'clickrecall(this, "Untitled")' %>
 		  </div>
 		  
 		  <div class="actions" >
@@ -53,6 +54,9 @@
 	<div id="roller-coaster"><%= image_tag("collage-page/yellowcoaster.png", :width=>126.5, :height=>64.4)  %></div>
 	
 	<div id="preloaded-background"></div>
+	
+	
+	<div id="sound-element"></div>
 	
 	<script type="text/javascript">
 		
@@ -73,6 +77,17 @@
 		}
 		
 		fadeOut();
-		
+	
+		function clickclear(thisfield, defaulttext) {
+			if (thisfield.value == defaulttext) {
+				thisfield.value = "";
+			}
+		}
+		function clickrecall(thisfield, defaulttext) {
+			if (thisfield.value == "") {
+				thisfield.value = defaulttext;
+			}
+		}		
+
 	</script>
 </div>

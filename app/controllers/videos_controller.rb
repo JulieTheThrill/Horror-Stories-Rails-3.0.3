@@ -1,5 +1,25 @@
 class VideosController < ApplicationController
-  before_filter :login_required, :only=>['welcome', 'change_password', 'hidden']
+  before_filter :login_required, :only=>['edit', 'update', 'destroy']
+    
+    require 'csv'
+    
+  def import
+    Video.delete_all
+    @cats = [0,0,1,2,3,4,6,7,8,9,10,11,13,14,15,16,17,19,20,21,22,24,25,27,28]
+    puts 'HEEELLLLOOOOO'
+    CSV.foreach("#{Rails.root}/public/csvfile.csv") do |row|
+      @video = Video.create(:title => row[0])
+      puts @video.title
+      23.times do |i|
+        if (row[i] == 'x' or row[i] == 'X')
+            puts Category.find_by_id(@cats[i]).inspect
+            @video.categories << Category.find_by_id(@cats[i])
+        end
+      end
+    end
+    @videos = Video.all
+  end
+  
   
   # GET /videos
   # GET /videos.json
@@ -27,7 +47,7 @@ class VideosController < ApplicationController
   # GET /videos/new
   # GET /videos/new.json
   def new
-    get_all_categories
+    get_categories
     @video = Video.new
 
     respond_to do |format|
@@ -89,6 +109,10 @@ class VideosController < ApplicationController
   def get_all_categories
     @categories = Category.find(:all, :order => "name desc")
 
+  end
+  
+  def get_categories
+    @categories = Category.find(:all)
   end
   
   def collage

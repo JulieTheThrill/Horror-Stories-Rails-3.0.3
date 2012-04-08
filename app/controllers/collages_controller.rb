@@ -1,5 +1,5 @@
 class CollagesController < ApplicationController
-  
+  before_filter :login_required, :only=>['edit', 'update', 'destroy']
   
   # GET /collages
   # GET /collages.json
@@ -86,8 +86,10 @@ class CollagesController < ApplicationController
   end
   
   def share
+    @collage = Collage.find(:all, :order => "created_at DESC", :limit => 1)
+    
     respond_to do |format|
-      UserMailer.share_collage("julielgill@gmail.com").deliver
+        format.html { render :action => "share" }
     end
   end
   

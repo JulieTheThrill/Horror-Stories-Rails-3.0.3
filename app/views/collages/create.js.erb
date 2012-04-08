@@ -5,7 +5,6 @@ tag.src = "http://www.youtube.com/player_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-
 $('#end-video-image').css('visibility', 'hidden');
 $('#new_collage').css('visibility', 'hidden');
 $('#sound-buttons').css('visibility', 'visible'); 
@@ -17,8 +16,7 @@ function onYouTubePlayerAPIReady() {
 	player = new YT.Player('player', {
 	      height: '138',
 	      width: '273',
-	      videoId:'<%= @collage.videos[0].title %>',
-	      playerVars:{autoplay:1, controls:0, 'playlist': ['<%= @collage.videos[1..@collage.videos.length].collect{|v| v.title}.join("', '") %>']},
+	      playerVars:{autoplay:1, controls:0},
 	      events: {
 	      'onReady': onPlayerReady,
 	      'onStateChange': onPlayerStateChange,
@@ -30,6 +28,7 @@ function onYouTubePlayerAPIReady() {
 function onPlayerReady(event) {
 	 if (player) {
 	 	player.mute();
+	 	player.loadPlaylist('<%= @collage.videos[0..@collage.videos.length].collect{|v| v.title}.join(",") %>', 0, 0, "small");
 	    event.target.playVideo();
 	  }
 }
@@ -37,10 +36,15 @@ function onPlayerReady(event) {
 function onPlayerStateChange(event) {
     if (event.data == YT.PlayerState.ENDED) {
     	$('#player').css('visibility', 'hidden');  
-    	$('#end-video-image').css('visibility', 'visible');   
+    	$('#end-video-image').css('visibility', 'visible'); 
+		$('#sound-element').html("");
+		player.Mute();  
     }
 }
 
 function onPlayerError(event) {
     player.nextVideo();
 }
+
+
+

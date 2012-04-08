@@ -32,6 +32,7 @@ a {
 	height:552px;
 	width: 800px;
 	margin: 50px auto;
+	color:#fff;
 }
 
 
@@ -85,7 +86,9 @@ a {
 
 #choose-another-vid a{
   position:absolute;
-  background:url('../images/share-videos-page/choose-another.png') no-repeat 516px 20px;  
+  background:url('../images/collage-page/choose-another.png') no-repeat;  
+  height:20px;
+  width:258px;
 }
 
 #choose-another-vid a:hover{
@@ -108,6 +111,14 @@ a {
   margin-top:276px;
   height:138px;
   width:273px;
+  position:absolute;
+}
+
+#single-videos{
+  margin-left:475px;
+  margin-top:118px;
+  height:160px;
+  width:290px;
   position:absolute;
 }
 
@@ -222,7 +233,9 @@ a {
 
 #choose-another a{
   position:absolute;
-  background:url('../images/read-page/choose-another.png') no-repeat 516px 20px;
+  background:url('../images/read-page/choose-another.png') no-repeat;
+  height:20px;
+  width:258px;
 }
 
 #choose-another a:hover{
@@ -347,7 +360,7 @@ a {
 
 #navigation #write a{
   position:absolute;
-  margin:20px 0 0 15px;
+  margin:20px 0 0 8px;
   background:url('../images/write-button.png') no-repeat;
   height:14px;
   width:193px;
@@ -371,20 +384,20 @@ a {
   margin:19px 0 0 210px;
   background:url('../images/read-button.png') no-repeat;
   height:14px;
-  width:196px;
+  width:197px;
 }
 
 #navigation #read a:hover{
-  background-position:-196px 0; 
+  background-position:-197px 0; 
 }
 
 #navigation #read-select {
   position:absolute;
   margin:19px 0 0 210px;
   background:url('../images/read-button.png') no-repeat;
-  background-position:-393px 0; 
+  background-position:-394px 0; 
   height:14px;
-  width:196px;
+  width:197px;
 }
 
 #navigation #create a{
@@ -448,7 +461,7 @@ a {
   position:absolute;
   margin:126px 0 0 470px;
   height:384px;
-  width:193px;
+  width:210px;
   overflow:auto;
 }
 
@@ -483,7 +496,7 @@ a {
 }
 
 #collage-title input{
-  margin:209px 0 0 597px;
+  margin:210px 0 0 598px;
   background-color:transparent;
   border:none;
   position:absolute;
@@ -607,11 +620,12 @@ a {
 #monsters-categories{
     margin-left:100px;
     margin-top: 19px; 
+  	width:80px;
     visibility:hidden;
 }
 
 #weather-categories{
-    margin-left:175px;
+    margin-left:171px;
     margin-top: 24px;
     visibility:hidden;
 }
@@ -625,6 +639,7 @@ a {
 #blood-categories{
     margin-left:345px;
     margin-top: 25px;
+ 	width:80px;
     visibility:hidden;
 }
 
@@ -667,6 +682,7 @@ a {
 
 #grave-monsters{
   margin-left:88px; 
+  width:80px;
 }
 
 #grave-weather{
@@ -679,6 +695,7 @@ a {
 
 #grave-blood{
   margin-left:335px; 
+  width:80px;
 }
 
 #grave-victims{

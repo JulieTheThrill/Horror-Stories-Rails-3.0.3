@@ -1,5 +1,5 @@
 class UserController < ApplicationController
-#  before_filter :login_required, :only=>['welcome', 'change_password', 'hidden']
+  before_filter :login_required, :only=>['welcome', 'change_password', 'hidden']
 
   def signup
     @user = User.new(params[:user])

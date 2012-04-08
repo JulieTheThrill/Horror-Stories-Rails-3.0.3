@@ -4,12 +4,16 @@
   <tr>
     <th>Title</th>
     <th>ID</th>
+    <th>Categories</th>
   </tr>
 
 <% @videos.each do |video| %>
   <tr>
     <td>YT ID: <%= video.title %></td>
     <td>VID ID: <%= video.id %></td>
+    <td>CATS: <% video.categories.each do |v| %>
+    	<%=  v.name  %>
+    	<%end%></td>
     <td><%= link_to 'Show', video %></td>
     <td><%= link_to 'Edit', edit_video_path(video) %></td>
     <td><%= link_to 'Destroy', video, confirm: 'Are you sure?', method: :delete %></td>

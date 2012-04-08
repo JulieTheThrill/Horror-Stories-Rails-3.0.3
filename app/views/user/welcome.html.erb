@@ -7,6 +7,8 @@
     <% end %>
 <% end %>
 
+<%= link_to "Back to Site", :controller => 'home', :action => 'poison'%> | <%= link_to "Logout", :controller => 'user', :action => 'logout'%>
+
 	<div id="admin-videos">
 		<h2>Videos</h2>
 		<% @videos.each do |video| %>

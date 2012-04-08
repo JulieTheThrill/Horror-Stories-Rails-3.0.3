@@ -1,24 +1,66 @@
-<p id="notice"><%= notice %></p>
+<div id="single-video">
+	<div id="nav">
+		<%= render 'shared/navigation' %>
+	</div>
+	
+	<div id="choose-another-vid">
+		<%= link_to image_tag("blank.png", :width=>258, :height=>20), collages_path %>
+	</div>
+	
+	<div id="single-videos">
+		<div id="end-video-image"><%= image_tag("collage-page/end-movie.png", :width=>290, :height=>160) %></div>
+		<div id="player"></div>
+	</div> <!--videos -->
+	
+	<script type="text/javascript">
+	
+		var player;
 
-<h2>Categories</h2>
-<% @collage.categories.each do |cat| %>
-	<%= cat.name.split('_')[0] %>: <%= cat.name.split('_')[1] %><br />
-<% end %><br />
-			
-			
-
-<h2>Videos</h2>
-<% count = 1 %>
-<% @collage.videos.each do |video| %>
-	<%= count %>
-	<%= video.title %> 
+		var tag = document.createElement('script');
+		tag.src = "http://www.youtube.com/player_api";
+		var firstScriptTag = document.getElementsByTagName('script')[0];
+		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 		
-	(<% video.categories.each do |cat| %>
-		<%= cat.name.split('_')[0] %>: <%= cat.name.split('_')[1] %>
-	<% end %>)<br />
-	<% count += 1%>
-<% end %>
+		$('#end-video-image').css('visibility', 'hidden');
+		$('#new_collage').css('visibility', 'hidden');
+		$('#sound-buttons').css('visibility', 'visible'); 
+		$('#collage').css('background-image', "url(../images/collage-page/play-background.png)");  
+		lowerGraves();
+		stopCoaster();
+		
+		function onYouTubePlayerAPIReady() {
+			player = new YT.Player('player', {
+			      height: '160',
+			      width: '290',
+			      playerVars:{autoplay:1, controls:0},
+			      events: {
+			      'onReady': onPlayerReady,
+			      'onStateChange': onPlayerStateChange,
+			      'onError': onPlayerError
+			      }
+		    });
+		}
+		  
+		function onPlayerReady(event) {
+			 if (player) {
+			 	player.mute();
+			 	player.loadPlaylist('<%= @collage.videos[0..@collage.videos.length].collect{|v| v.title}.join(",") %>', 0, 0, "small");
+			    event.target.playVideo();
+			  }
+		}
+		  
+		function onPlayerStateChange(event) {
+		    if (event.data == YT.PlayerState.ENDED) {
+		    	$('#player').css('visibility', 'hidden');  
+		    	$('#end-video-image').css('visibility', 'visible');   
+		    }
+		}
+		
+		function onPlayerError(event) {
+		    player.nextVideo();
+		}
 
 
-<%= link_to 'Edit', edit_collage_path(@collage) %> |
-<%= link_to 'Back', collages_path %>
+	
+	</script>
+</div>

@@ -27,33 +27,102 @@
       }
     }   
   	
-  	function radioGraves(type, category, id){
-  		objID = '#'	 + type + '-categories';
-  		if (objID == null || objID == undefined )  
-		return;  
-		  
-		$(objID + " input[type=checkbox]").each(function() {  
-			this.checked = false;
-		});  
-		//$(objID + " input[type=checkbox]")[id].checked = true;
-		
-		
-  /*		
-  		radioButton = 'video_category_list_' + id;
-  		if(document.getElementById('video_category_list_3').checked == true){
-  			 
+  	function radioGraves(type,  id){
+  		if(id <5){ //Setting Grave, not 'random'
+			UnCheckRadio(type + '_category_list_' + 5);
+  		}else if(id == 5){ //Setting Grave, 'random'
+  			for(var i = 1; i <=4; i++){
+				UnCheckRadio(type + '_category_list_' + i);
+  			}
+  			CheckRadio(type + '_category_list_' + 5);
+  		}else if (id > 5 && id <=10){ //Monster Grave, not 'random' or 'none'
+				UnCheckRadio(type + '_category_list_' + 11);
+				UnCheckRadio(type + '_category_list_' + 12);
+  		}else if (id == 11){ //Monster Grave, 'none'
+  			for(var i = 6; i <=10; i++){
+				UnCheckRadio(type + '_category_list_' + i);
+  			}
+  			UnCheckRadio(type + '_category_list_' + 12);
+  			CheckRadio(type + '_category_list_' + 11);
+  		}else if (id == 12){ //Monster Grave, 'random'
+  			for(var i = 6; i <=11; i++){
+				UnCheckRadio(type + '_category_list_' + i);
+  			}
+  			CheckRadio(type + '_category_list_' + 12);
   		}
-  		document.getElementById('video_category_list_4').checked = true
-  		$('input:checkbox').each(function(i) {
-                this.checked = false;
-            });
-  		$('input:checkbox[id=video_category_list_' + id + ']').attr('checked',true);
+  		else if (id > 12 && id <=16){ //Weather Grave
+			UnCheckRadio(type + '_category_list_' + 17);
+			UnCheckRadio(type + '_category_list_' + 18);
+  		}else if (id == 17){ //Weather Grave, 'none'
+  			for(var i = 13; i <=16; i++){
+				UnCheckRadio(type + '_category_list_' + i);
+  			}
+  			UnCheckRadio(type + '_category_list_' + 18);
+  			CheckRadio(type + '_category_list_' + 17);
+  		}else if (id == 18){ //Weather Grave, 'random'
+  			for(var i = 13; i <=17; i++){
+				UnCheckRadio(type + '_category_list_' + i);
+  			}
+  			CheckRadio(type + '_category_list_' + 18);
+  		}else if (id > 18 && id <=21){ //Creatures Grave
+			UnCheckRadio(type + '_category_list_' + 22);
+			UnCheckRadio(type + '_category_list_' + 23);
+  		}else if (id == 22){ //Creatures Grave, 'none'
+  			for(var i = 19; i <=21; i++){
+				UnCheckRadio(type + '_category_list_' + i);
+  			}
+  			UnCheckRadio(type + '_category_list_' + 23);
+  			CheckRadio(type + '_category_list_' + 22);
+  		}else if (id == 23){ //Creatures Grave, 'random'
+  			for(var i = 19; i <=22; i++){
+				UnCheckRadio(type + '_category_list_' + i);
+  			}
+  			CheckRadio(type + '_category_list_' + 23);
+  		}else if(id == 24){ //Blood Grave, 'yes'
+			UnCheckRadio(type + '_category_list_' + 25);
+			UnCheckRadio(type + '_category_list_' + 26);
+  			CheckRadio(type + '_category_list_' + 24);
+  		}else if(id == 25){ //Blood Grave, 'yes'
+			UnCheckRadio(type + '_category_list_' + 24);
+			UnCheckRadio(type + '_category_list_' + 26);
+  			CheckRadio(type + '_category_list_' + 25);
+  		}else if(id == 26){ //Blood Grave, 'random'
+			UnCheckRadio(type + '_category_list_' + 24);
+			UnCheckRadio(type + '_category_list_' + 25);
+  			CheckRadio(type + '_category_list_' + 26);
+  		}else if(id == 27){ //Victim Grave, 'yes'
+			UnCheckRadio(type + '_category_list_' + 28);
+			UnCheckRadio(type + '_category_list_' + 29);
+  			CheckRadio(type + '_category_list_' + 27);
+  		}else if(id == 28){ //Victim Grave, 'yes'
+			UnCheckRadio(type + '_category_list_' + 27);
+			UnCheckRadio(type + '_category_list_' + 29);
+  			CheckRadio(type + '_category_list_' + 28);
+  		}else if(id == 29){ //Victim Grave, 'random'
+			UnCheckRadio(type + '_category_list_' + 27);
+			UnCheckRadio(type + '_category_list_' + 28);
+  			CheckRadio(type + '_category_list_' + 29);
+  		}else {
+  			//nothing
+  		}
   		
-  		//alert( $("input[name=first_name]").val() );
-  		//$('#video_category_list_3').attr("checked", "false");
-  	*/
   	}
-  
+  	
+  	function UnCheckRadio(objID){
+		rad = document.getElementById(objID);
+		if(rad != undefined){
+			rad.checked= false;
+			rad.previousSibling.style.backgroundPosition = '0px 0px';
+		}
+  	}
+  	
+  	function CheckRadio(objID){
+  		rad = document.getElementById(objID)
+		if(rad != undefined){
+			rad.checked = true;
+			rad.previousSibling.style.backgroundPosition = "0 -" + radioHeight*2 + "px";
+		}
+  	}
 
 	function raiseGraves(){
 		document.getElementById('graves-container').style.visibility = 'visible'; 
@@ -97,8 +166,45 @@
       $('#roller-coaster').css('visibility', 'hidden');
     }
     
-    
-   
+    function soundChange(sound){
+		var nature = ["nature-crickets.mp3"];
+		var breathing = ['breathing-female.mp3', 'breathing-male.mp3'];
+		var soundtrack = ['creaky.mp3', 'soundtrack.mp3', 'soundtrack2.mp3'];
+		var musicbox = ['musicbox.mp3', 'musicbox2.mp3'];
+			
+		player.mute();
+		
+		if(sound == 'nature'){
+			var randomnumber=Math.floor(Math.random()*(nature.length-1));
+			$('#sound-element').html(
+				"<embed src='../sounds/" + nature[randomnumber] + "' hidden=true autostart=true loop=true>");
+		}else if (sound == 'video'){
+			$('#sound-element').html("");
+			player.unMute();
+		}else if (sound == 'off'){
+			$('#sound-element').html("");
+		}else if (sound == 'breathing'){
+			var randomnumber=Math.floor(Math.random()*(breathing.length-1));
+			$('#sound-element').html(
+				"<embed src='../sounds/" + breathing[randomnumber] + "' hidden=true autostart=true loop=true>");
+		}else if (sound == 'music-box'){
+			var randomnumber=Math.floor(Math.random()*(musicbox.length-1));
+			$('#sound-element').html(
+				"<embed src='../sounds/" + musicbox[randomnumber] + "' hidden=true autostart=true loop=true>");
+		} else if (sound == 'random'){
+			var randomnumber=Math.floor(Math.random()*(soundtrack.length-1));
+			$('#sound-element').html(
+				"<embed src='../sounds/" + soundtrack[randomnumber] + "' hidden=true autostart=true loop=true>");
+		}
+		
+	}
+	
+	function endSounds(){
+		
+		
+	}
+	    
+       
 /* CUSTOM FORM ELEMENTS
 
 Created by Ryan Fait
