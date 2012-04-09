@@ -11,7 +11,7 @@
   
  	function animateGrave(grave){
       if($('#grave-' + grave).css('margin-top') == '-4px'){ //It is currently up, so put it down.
-      	document.getElementById(grave + '-categories').style.visibility = 'hidden'; 
+		$('#' + grave + '-categories').css('visibility', 'hidden');
          $('#grave-' + grave).animate({
           marginTop: "8px" 
           }, 500, function() {
@@ -21,7 +21,7 @@
         $('#grave-' + grave).animate({
             marginTop: "-4px" 
           }, 500, function() {
-      		document.getElementById(grave + '-categories').style.visibility = 'visible';
+      		$('#' + grave + '-categories').css('visibility', 'visible');
           	settinggraveup = true;
         });
       }
@@ -109,7 +109,7 @@
   	}
   	
   	function UnCheckRadio(objID){
-		rad = document.getElementById(objID);
+		rad = $('#' + objID);
 		if(rad != undefined){
 			rad.checked= false;
 			rad.previousSibling.style.backgroundPosition = '0px 0px';
@@ -117,7 +117,7 @@
   	}
   	
   	function CheckRadio(objID){
-  		rad = document.getElementById(objID)
+		rad = $('#' + objID);
 		if(rad != undefined){
 			rad.checked = true;
 			rad.previousSibling.style.backgroundPosition = "0 -" + radioHeight*2 + "px";
@@ -125,7 +125,7 @@
   	}
 
 	function raiseGraves(){
-		document.getElementById('graves-container').style.visibility = 'visible'; 
+		$('#graves-container').css('visibility', 'visible');
 		raiseGrave('setting');
 		raiseGrave('monsters');
 		raiseGrave('weather');
@@ -151,6 +151,7 @@
 	}
 	
 	function lowerGrave(grave){
+		$('#' + grave + '-categories').css('visibility', 'hidden');
 		$('#grave-' + grave).animate({
           marginTop: "110px" 
           }, 1000, function() {
