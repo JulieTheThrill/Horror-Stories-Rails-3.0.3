@@ -17,6 +17,10 @@ img{
 	border:none;
 }
 
+a{
+	outline:none;
+}
+
 a {
 	text-decoration:none;
 	border:none;
@@ -103,7 +107,6 @@ a {
 
 #upload-form #video-link input{
   background-color:transparent;
-  border:none;
 }
 
 #videos{
@@ -331,6 +334,7 @@ a {
   background-color:transparent;
   border:none;
   font-family:verdana;
+  overflow:auto;
 }
 
 .story-submit{
@@ -407,20 +411,20 @@ a {
   margin:20px 0 0 8px;
   background:url('../images/write-button.png') no-repeat;
   height:14px;
-  width:193px;
+  width:189px;
 }
 
 #navigation #write a:hover{
-  background-position:-194px 0; 
+  background-position:-189px 0; 
 }
 
 #navigation #write-select{
   position:absolute;
   margin:20px 0 0 15px;
   background:url('../images/write-button.png') no-repeat;
-  background-position:-388px -1px;
+  background-position:-378px -1px;
   height:14px;
-  width:194px;
+  width:189px;
 }
 
 #navigation #read a{
@@ -572,6 +576,7 @@ a {
   position:absolute;
   margin-top:60px;
   font-family:Verdana;
+  overflow:auto;
 }
 
 .share_form{
@@ -589,6 +594,7 @@ a {
   margin:500px 0 0 580px; 
   z-index:1;
   visibility:hidden;
+  font:1.5em/20px verdana;
 }
 
 #share-button a{
@@ -660,6 +666,7 @@ a {
   position:absolute;
   margin:278px 0 0 230px;
   visibility:hidden;
+  font:1.5em/20px verdana;
 }
 
 #sound-buttons-single{

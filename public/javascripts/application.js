@@ -124,16 +124,15 @@
 		var musicbox = ['musicbox.mp3', 'musicbox2.mp3'];
 			
 		player.mute();
+		$('#sound-element').html("");
 		
 		if(sound == 'nature'){
 			var randomnumber=Math.floor(Math.random()*(nature.length-1));
 			$('#sound-element').html(
 				"<embed src='../sounds/" + nature[randomnumber] + "' hidden=true autostart=true loop=true>");
 		}else if (sound == 'video'){
-			$('#sound-element').html("");
 			player.unMute();
 		}else if (sound == 'off'){
-			$('#sound-element').html("");
 		}else if (sound == 'breathing'){
 			var randomnumber=Math.floor(Math.random()*(breathing.length-1));
 			$('#sound-element').html(
@@ -188,21 +187,26 @@ var Custom = {
 	init: function() {
 		var inputs = document.getElementsByTagName("input"), span = Array(), textnode, option, active;
 		for(a = 0; a < inputs.length; a++) {
-			if(inputs[a].type == "checkbox"  && inputs[a].className == "styled") {
+			if((inputs[a].type == "checkbox" || inputs[a].type == "radio") && inputs[a].className == "styled") {
 				span[a] = document.createElement("span");
 				span[a].className = inputs[a].type;
 
 				if(inputs[a].checked == true) {
-					position = "0 -" + (checkboxHeight*2) + "px";
-					span[a].style.backgroundPosition = position;
+					if(inputs[a].type == "checkbox") {
+						position = "0 -" + (checkboxHeight*2) + "px";
+						span[a].style.backgroundPosition = position;
+					} else {
+						position = "0 -" + (radioHeight*2) + "px";
+						span[a].style.backgroundPosition = position;
+					}
 				}
 				inputs[a].parentNode.insertBefore(span[a], inputs[a]);
-				//inputs[a].onchange = Custom.clear;
+				if(inputs[a].type == "radio"){
+					inputs[a].onchange = Custom.clear;
+				}
 				if(!inputs[a].getAttribute("disabled")) {
 					span[a].onmousedown = Custom.pushed;
 					span[a].onmouseup = Custom.check;
-					//inputs[a].nextSibling.nextSibling.onmouseup = Custom.check;
-					//inputs[a].nextSibling.nextSibling.onmousedown = Custom.pushed;
 				} else {
 					span[a].className = span[a].className += " disabled";
 				}
