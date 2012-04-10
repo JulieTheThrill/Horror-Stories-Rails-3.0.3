@@ -3,10 +3,9 @@
 
 
 /**
- * @author Julie
+ * @author Julie Gill
  */
 
- 	
 	var settinggraveup = false;
   
  	function animateGrave(grave){

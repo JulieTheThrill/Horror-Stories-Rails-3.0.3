@@ -1,0 +1,26 @@
+<%= form_tag({:controller => "collages", :action => "share_again"}, :method => "post", :class => "share_form") do %>
+  
+
+  <%= hidden_field_tag :collageid, @collage.id %>
+
+  <div class="field" id='share-from-name'>
+   <%= text_field :from_name, :from_name%>
+   </div>
+
+  <div class="field" id='share-from-email'>
+   <%= email_field :from_email, :from_address %>
+  </div>
+      
+  <div class="field" id='share-to-email'>
+   <%= text_field :to_email, :to_address %>
+   </div>
+   
+   
+  <div class="field" id='share-to-message'>
+   <%= text_area_tag(:message, "", :size => "40x2") %>
+	</div>	
+
+  <div class="actions" >
+    <%= image_submit_tag('blank.png', :class => 'send-movie-button') %>
+  </div>
+<% end %>

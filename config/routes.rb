@@ -27,6 +27,10 @@ HorrorMod::Application.routes.draw do
   get "stories/adminshow"
   
   get "videos/import"
+  
+  match '/collages/share/:id' => 'collages#share'
+  
+  post 'collages/share_again'
     
   resources :collages
   

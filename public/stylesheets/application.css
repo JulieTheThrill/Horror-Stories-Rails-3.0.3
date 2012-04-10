@@ -140,6 +140,13 @@ a {
   margin: 50px auto;
 }
 
+#share-success{
+  background: url('../images/share-videos-page/success-background.png') no-repeat;
+  height:550px;
+  width: 800px;
+  margin: 50px auto;
+}
+
 #success-button a{
   margin:280px 0 0 65px;
   position:absolute;
@@ -153,12 +160,33 @@ a {
   background-position:-219px ;
 }
 
+#share-success-button a{
+  margin:240px 0 0 485px;
+  position:absolute;
+  background: url('../images/share-videos-page/success-button.png') no-repeat;
+  text-decoration:none;
+  width: 256px;
+  height: 31px;
+}
+
+#share-success-button a:hover{
+  background-position:-256px ;
+}
+
 #fail{
   background: url('../images/upload-page/fail.png') no-repeat;
   height:550px;
   width: 800px;
   margin: 50px auto;
 }
+
+#share-fail{
+  background: url('../images/share-videos-page/fail-background.png') no-repeat;
+  height:550px;
+  width: 800px;
+  margin: 50px auto;
+}
+
 
 #fail-button a{
   margin:284px 0 0 107px;
@@ -173,6 +201,18 @@ a {
   background-position:-189px ;
 }
 
+#share-fail-button a{
+  margin:260px 0 0 415px;
+  position:absolute;
+  background: url('../images/share-videos-page/fail-button.png') no-repeat;
+  text-decoration:none;
+  width: 194px;
+  height: 32px;
+}
+
+#share-fail-button a:hover{
+  background-position:-194px ;
+}
 
 /*********************USER********************/
 .admin{
@@ -506,6 +546,43 @@ a {
   position:absolute;
 }
 
+#share-from-email input{
+  background-color:transparent;
+  border:none;
+  position:absolute;
+  margin-top:20px;
+}
+
+#share-from-name input{
+  background-color:transparent;
+  border:none;
+  position:absolute;
+}
+
+#share-to-email input{
+  background-color:transparent;
+  border:none;
+  position:absolute;
+  margin-top:40px;
+}
+
+#share-to-message textarea{
+  background-color:transparent;
+  border:none;
+  position:absolute;
+  margin-top:60px;
+  font-family:Verdana;
+}
+
+.share_form{
+	position:absolute;
+	margin:164px 0 0 250px;
+}
+
+.share_form input{
+	font-family:Verdana;
+}
+
 
 #share-button{
   position:absolute;
@@ -523,6 +600,20 @@ a {
 
 #share-button a:hover{
   background-position:-183px 0; 
+}
+
+.send-movie-button{
+  position:absolute;
+  margin:90px 0 0 336px;
+  background:url('../images/share-videos-page/send-button.png') no-repeat;
+  text-decoration:none;
+  height:20px;
+  width:55px;
+  font:1.5em/20px verdana;
+}
+
+.send-movie-button:hover{
+  background-position:-55px 0; 
 }
 
 

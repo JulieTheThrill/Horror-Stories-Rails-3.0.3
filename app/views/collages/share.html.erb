@@ -9,7 +9,26 @@
 <div id="share-collage">
 	<%= render 'shared/navigation' %>
 	
+	<%= render 'shareform' %>
+	
+	
 	<div id="facebook">
 		<div class="fb-like" data-href="http://www.horrorstories.jillianmcdonald.net" data-send="true" data-layout="button_count" data-width="450" data-show-faces="false" data-action="recommend"></div>
 	</div>
 </div>
+
+
+<script type="text/javascript">
+function clickclear(thisfield, defaulttext) {
+			if (thisfield.value == defaulttext) {
+				thisfield.value = "";
+			}
+		}
+		function clickrecall(thisfield, defaulttext) {
+			if (thisfield.value == "") {
+				thisfield.value = defaulttext;
+			}
+		}		
+
+	</script>
+
