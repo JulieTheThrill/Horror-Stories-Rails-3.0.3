@@ -27,80 +27,37 @@
     }   
   	
   	function radioGraves(type,  id){
-  		if(id <5){ //Setting Grave, not 'random'
-			UnCheckRadio(type + '_category_list_' + 5);
-  		}else if(id == 5){ //Setting Grave, 'random'
-  			for(var i = 1; i <=4; i++){
+  		if(id <=5){ //Setting Grave - uncheck the rest.
+			for(var i = 1; i <=5; i++){
 				UnCheckRadio(type + '_category_list_' + i);
   			}
-  			CheckRadio(type + '_category_list_' + 5);
-  		}else if (id > 5 && id <=10){ //Monster Grave, not 'random' or 'none'
-				UnCheckRadio(type + '_category_list_' + 11);
-				UnCheckRadio(type + '_category_list_' + 12);
-  		}else if (id == 11){ //Monster Grave, 'none'
-  			for(var i = 6; i <=10; i++){
+  			CheckRadio(type + '_category_list_' + id);
+  		}else if (id > 5 && id <=12){ //Monster Grave - uncheck the rest.
+			for(var i = 6; i <=12; i++){
 				UnCheckRadio(type + '_category_list_' + i);
   			}
-  			UnCheckRadio(type + '_category_list_' + 12);
-  			CheckRadio(type + '_category_list_' + 11);
-  		}else if (id == 12){ //Monster Grave, 'random'
-  			for(var i = 6; i <=11; i++){
-				UnCheckRadio(type + '_category_list_' + i);
-  			}
-  			CheckRadio(type + '_category_list_' + 12);
+  			CheckRadio(type + '_category_list_' + id);
   		}
-  		else if (id > 12 && id <=16){ //Weather Grave
-			UnCheckRadio(type + '_category_list_' + 17);
-			UnCheckRadio(type + '_category_list_' + 18);
-  		}else if (id == 17){ //Weather Grave, 'none'
-  			for(var i = 13; i <=16; i++){
+  		else if (id > 12 && id <=18){ //Weather Grave - uncheck the rest.
+			for(var i = 13; i <=18; i++){
 				UnCheckRadio(type + '_category_list_' + i);
   			}
-  			UnCheckRadio(type + '_category_list_' + 18);
-  			CheckRadio(type + '_category_list_' + 17);
-  		}else if (id == 18){ //Weather Grave, 'random'
-  			for(var i = 13; i <=17; i++){
+  			CheckRadio(type + '_category_list_' + id);
+  		}else if (id > 18 && id <=23){ //Creatures Grave - uncheck the rest.
+			for(var i = 19; i <=23; i++){
 				UnCheckRadio(type + '_category_list_' + i);
   			}
-  			CheckRadio(type + '_category_list_' + 18);
-  		}else if (id > 18 && id <=21){ //Creatures Grave
-			UnCheckRadio(type + '_category_list_' + 22);
-			UnCheckRadio(type + '_category_list_' + 23);
-  		}else if (id == 22){ //Creatures Grave, 'none'
-  			for(var i = 19; i <=21; i++){
+  			CheckRadio(type + '_category_list_' + id);
+  		}else if(id > 23 && id <= 26){ //Blood Grave, 'yes' - uncheck the rest.
+			for(var i = 24; i <=26; i++){
 				UnCheckRadio(type + '_category_list_' + i);
   			}
-  			UnCheckRadio(type + '_category_list_' + 23);
-  			CheckRadio(type + '_category_list_' + 22);
-  		}else if (id == 23){ //Creatures Grave, 'random'
-  			for(var i = 19; i <=22; i++){
+  			CheckRadio(type + '_category_list_' + id);
+  		}else if(id > 26 && id <= 29){ //Victim Grave, 'yes' - uncheck the rest.
+			for(var i = 27; i <=29; i++){
 				UnCheckRadio(type + '_category_list_' + i);
   			}
-  			CheckRadio(type + '_category_list_' + 23);
-  		}else if(id == 24){ //Blood Grave, 'yes'
-			UnCheckRadio(type + '_category_list_' + 25);
-			UnCheckRadio(type + '_category_list_' + 26);
-  			CheckRadio(type + '_category_list_' + 24);
-  		}else if(id == 25){ //Blood Grave, 'yes'
-			UnCheckRadio(type + '_category_list_' + 24);
-			UnCheckRadio(type + '_category_list_' + 26);
-  			CheckRadio(type + '_category_list_' + 25);
-  		}else if(id == 26){ //Blood Grave, 'random'
-			UnCheckRadio(type + '_category_list_' + 24);
-			UnCheckRadio(type + '_category_list_' + 25);
-  			CheckRadio(type + '_category_list_' + 26);
-  		}else if(id == 27){ //Victim Grave, 'yes'
-			UnCheckRadio(type + '_category_list_' + 28);
-			UnCheckRadio(type + '_category_list_' + 29);
-  			CheckRadio(type + '_category_list_' + 27);
-  		}else if(id == 28){ //Victim Grave, 'yes'
-			UnCheckRadio(type + '_category_list_' + 27);
-			UnCheckRadio(type + '_category_list_' + 29);
-  			CheckRadio(type + '_category_list_' + 28);
-  		}else if(id == 29){ //Victim Grave, 'random'
-			UnCheckRadio(type + '_category_list_' + 27);
-			UnCheckRadio(type + '_category_list_' + 28);
-  			CheckRadio(type + '_category_list_' + 29);
+  			CheckRadio(type + '_category_list_' + id);
   		}else {
   			//nothing
   		}
@@ -108,19 +65,13 @@
   	}
   	
   	function UnCheckRadio(objID){
-		rad = $('#' + objID);
-		if(rad != undefined){
-			rad.checked= false;
-			rad.previousSibling.style.backgroundPosition = '0px 0px';
-		}
+		$('#' + objID).attr('checked', false);
+		$('#' + objID).prev().css("background-position", "0px 0px");
   	}
   	
   	function CheckRadio(objID){
-		rad = $('#' + objID);
-		if(rad != undefined){
-			rad.checked = true;
-			rad.previousSibling.style.backgroundPosition = "0 -" + radioHeight*2 + "px";
-		}
+		$('#' + objID).attr('checked', true);
+		$('#' + objID).prev().css("background-position", "0 -" + radioHeight*2 + "px");
   	}
 
 	function raiseGraves(){
@@ -237,73 +188,43 @@ var Custom = {
 	init: function() {
 		var inputs = document.getElementsByTagName("input"), span = Array(), textnode, option, active;
 		for(a = 0; a < inputs.length; a++) {
-			if((inputs[a].type == "checkbox" || inputs[a].type == "radio") && inputs[a].className == "styled") {
+			if(inputs[a].type == "checkbox"  && inputs[a].className == "styled") {
 				span[a] = document.createElement("span");
 				span[a].className = inputs[a].type;
 
 				if(inputs[a].checked == true) {
-					if(inputs[a].type == "checkbox") {
-						position = "0 -" + (checkboxHeight*2) + "px";
-						span[a].style.backgroundPosition = position;
-					} else {
-						position = "0 -" + (radioHeight*2) + "px";
-						span[a].style.backgroundPosition = position;
-					}
+					position = "0 -" + (checkboxHeight*2) + "px";
+					span[a].style.backgroundPosition = position;
 				}
 				inputs[a].parentNode.insertBefore(span[a], inputs[a]);
-				inputs[a].onchange = Custom.clear;
+				//inputs[a].onchange = Custom.clear;
 				if(!inputs[a].getAttribute("disabled")) {
 					span[a].onmousedown = Custom.pushed;
 					span[a].onmouseup = Custom.check;
+					//inputs[a].nextSibling.nextSibling.onmouseup = Custom.check;
+					//inputs[a].nextSibling.nextSibling.onmousedown = Custom.pushed;
 				} else {
 					span[a].className = span[a].className += " disabled";
 				}
 			}
 		}
-		inputs = document.getElementsByTagName("select");
-		for(a = 0; a < inputs.length; a++) {
-			if(inputs[a].className == "styled") {
-				option = inputs[a].getElementsByTagName("option");
-				active = option[0].childNodes[0].nodeValue;
-				textnode = document.createTextNode(active);
-				for(b = 0; b < option.length; b++) {
-					if(option[b].selected == true) {
-						textnode = document.createTextNode(option[b].childNodes[0].nodeValue);
-					}
-				}
-				span[a] = document.createElement("span");
-				span[a].className = "select";
-				span[a].id = "select" + inputs[a].name;
-				span[a].appendChild(textnode);
-				inputs[a].parentNode.insertBefore(span[a], inputs[a]);
-				if(!inputs[a].getAttribute("disabled")) {
-					inputs[a].onchange = Custom.choose;
-				} else {
-					inputs[a].previousSibling.className = inputs[a].previousSibling.className += " disabled";
-				}
-			}
-		}
-		document.onmouseup = Custom.clear;
+		//document.onmouseup = Custom.clear;
 	},
 	pushed: function() {
 		element = this.nextSibling;
 		if(element.checked == true && element.type == "checkbox") {
 			this.style.backgroundPosition = "0 -" + checkboxHeight*3 + "px";
-		} else if(element.checked == true && element.type == "radio") {
-			this.style.backgroundPosition = "0 -" + radioHeight*3 + "px";
 		} else if(element.checked != true && element.type == "checkbox") {
 			this.style.backgroundPosition = "0 -" + checkboxHeight + "px";
-		} else {
-			this.style.backgroundPosition = "0 -" + radioHeight + "px";
 		}
 	},
 	check: function() {
 		element = this.nextSibling;
-		if(element.checked == true && element.type == "checkbox") {
+		if(element.checked == true && element.type == "radio") {
 			this.style.backgroundPosition = "0 0";
 			element.checked = false;
 		} else {
-			if(element.type == "checkbox") {
+			if(element.type == "radio") {
 				this.style.backgroundPosition = "0 -" + checkboxHeight*2 + "px";
 			} else {
 				this.style.backgroundPosition = "0 -" + radioHeight*2 + "px";

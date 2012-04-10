@@ -1,8 +1,7 @@
 class CollagesController < ApplicationController
   before_filter :login_required, :only=>['edit', 'update', 'destroy']
   
-  
-    require 'net/http'
+  require 'net/http'
   
   # GET /collages
   # GET /collages.json
