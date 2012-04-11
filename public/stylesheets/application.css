@@ -647,7 +647,9 @@ a {
   margin-top:549px;
   position:absolute;
   z-index:10;
-  background: url('../images/collage-page/background-mask.jpg') repeat 800px 50px;
+  background: url('../images/collage-page/background-mask.jpg') repeat;
+  width:800px;
+  height:200px;
 }
 
 #collage{
