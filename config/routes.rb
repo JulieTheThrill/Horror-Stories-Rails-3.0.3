@@ -32,7 +32,7 @@ HorrorMod::Application.routes.draw do
   
   post 'collages/share_again'
     
-  resources :collages
+  resources :movies, :as => :collages, :controller => :collages
   
   resources :stories
   
