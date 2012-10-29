@@ -54,7 +54,7 @@ a {
 /*****************VIDEOS*********************/
 
 #upload-videos{
-  background-image:url('../images/upload-page/background.png');
+  background-image:url('../images/upload-page/background.jpg');
   height:549px;
   width: 800px;
   margin: 50px auto;
@@ -72,7 +72,7 @@ a {
 }
 
 #single-video{
-  background-image:url('../images/share-videos-page/single-background.png');
+  background-image:url('../images/share-videos-page/single-background.jpg');
   height:550px;
   width: 800px;
   margin: 50px auto;
@@ -137,14 +137,14 @@ a {
 }
 
 #success{
-  background: url('../images/upload-page/success.png') no-repeat;
+  background: url('../images/upload-page/success.jpg') no-repeat;
   height:550px;
   width: 800px;
   margin: 50px auto;
 }
 
 #share-success{
-  background: url('../images/share-videos-page/success-background.png') no-repeat;
+  background: url('../images/share-videos-page/success-background.jpg') no-repeat;
   height:550px;
   width: 800px;
   margin: 50px auto;
@@ -177,14 +177,14 @@ a {
 }
 
 #fail{
-  background: url('../images/upload-page/fail.png') no-repeat;
+  background: url('../images/upload-page/fail.jpg') no-repeat;
   height:550px;
   width: 800px;
   margin: 50px auto;
 }
 
 #share-fail{
-  background: url('../images/share-videos-page/fail-background.png') no-repeat;
+  background: url('../images/share-videos-page/fail-background.jpg') no-repeat;
   height:550px;
   width: 800px;
   margin: 50px auto;
@@ -260,14 +260,14 @@ a {
 
 /**********************Stories*************************/
 #read-stories{
-  background-image:url('../images/read-page/background.png');
+  background-image:url('../images/read-page/background.jpg');
   height:550px;
   width: 800px;
   margin: 50px auto;
 }
 
 #read-single-story{
-  background-image:url('../images/read-page/single-background.png');
+  background-image:url('../images/read-page/single-background.jpg');
   height:548px;
   width: 800px;
   margin: 50px auto;
@@ -314,7 +314,7 @@ a {
 }
 
 #new-story{
-  background-image:url('../images/write-page/background.png');
+  background-image:url('../images/write-page/background.jpg');
   height:552px;
   width: 800px;
   margin: 50px auto;
@@ -472,7 +472,7 @@ a {
 #poison{
   height:549px;
   width: 800px;
-  background-image: url('../images/poison-page/background.png');
+  background-image: url('../images/poison-page/background.jpg');
 }
 
 
@@ -481,7 +481,7 @@ a {
 #credits{
   height:550px;
   width: 800px;
-  background-image: url('../images/credits-page/background.png');
+  background-image: url('../images/credits-page/background.jpg');
 }
 
 #credits a{
@@ -502,7 +502,7 @@ a {
 }
 
 #preloaded-background { 
-  background: url('../images/collage-page/play-background.png') no-repeat -9999px -9999px; 
+  background: url('../images/collage-page/play-background.jpg') no-repeat -9999px -9999px; 
 }
 
 #videos-list{
@@ -624,7 +624,7 @@ a {
 
 
 #share-videos{
-  background-image:url('../images/share-videos-page/background.png');
+  background-image:url('../images/share-videos-page/background.jpg');
   height:550px;
   width: 800px;
   margin: 50px auto;
@@ -661,7 +661,7 @@ a {
 #share-collage{
   height:534px;
   width: 800px; 
-  background-image: url('../images/collage-page/share-background.png');
+  background-image: url('../images/collage-page/share-background.jpg');
 }
 
 #sound-buttons{

@@ -1,5 +1,6 @@
-<%= link_to 'Delete Video', @video, confirm: 'Are you sure?', method: :delete %> |
 <%= link_to 'Return to Admin', :controller => "user", :action => "welcome"  %>
+
+<%= button_to 'Delete Video', @video, :confirm => 'Are you sure?', :method => :delete %>
 
 <%= form_for @video do |f| %>
 
@@ -23,7 +24,7 @@
 				<%= check_box_tag(
 		                        "video[category_list][#{category.id}]", 
 		                        "1", 
-		                        @video.categories.detect{|d| d == category}, :class => "styled") %>
+		                        @video.categories.detect{|d| d == category}) %>
 		                     
 				<%= name %><br />
 			<% end %>

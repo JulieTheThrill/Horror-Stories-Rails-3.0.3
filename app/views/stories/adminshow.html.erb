@@ -1,8 +1,10 @@
 <div class="admin">
 	<h2>Viewing Story</h2>
-	<%= link_to 'Delete Story', @story, confirm: 'Are you sure?', method: :delete %> |
 	<%= link_to 'Return to Admin', :controller => "user", :action => "welcome"  %>
 	<br /><br />
 	
   	<%= @story.body %>
+  	
+  	<br /><br />
+	<%= button_to 'Delete Story', @story, :confirm => 'Are you sure?', :method => :delete %>
 </div>

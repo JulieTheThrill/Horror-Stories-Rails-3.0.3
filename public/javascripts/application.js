@@ -118,6 +118,12 @@
     }
     
     function soundChange(sound){
+    	sounds = ['off', 'video', 'nature', 'breathing', 'music-box', 'random'];
+		for(var i = 0; i < sounds.length; i ++){
+			UnCheckRadio("sound_" + sounds[i]);
+		}
+		CheckRadio("sound_" + sound);
+  	
 		var nature = ["nature-crickets.mp3"];
 		var breathing = ['breathing-female.mp3', 'breathing-male.mp3'];
 		var soundtrack = ['creaky.mp3', 'soundtrack.mp3', 'soundtrack2.mp3'];
@@ -190,6 +196,7 @@ var Custom = {
 			if((inputs[a].type == "checkbox" || inputs[a].type == "radio") && inputs[a].className == "styled") {
 				span[a] = document.createElement("span");
 				span[a].className = inputs[a].type;
+				span[a].onclick = inputs[a].onclick;
 
 				if(inputs[a].checked == true) {
 					if(inputs[a].type == "checkbox") {

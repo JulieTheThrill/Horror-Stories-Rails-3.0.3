@@ -16,8 +16,8 @@
 			<% video.categories.each do |cat| %>
 				<%= cat.name.split('_')[0] %>: <%= cat.name.split('_')[1] %><br />
 			<% end %><br />
-		   	<%= link_to 'Edit', edit_video_path(video) %> | 
-		   	<%= link_to 'Delete Video', video, confirm: 'Are you sure you want to delete this video?', method: :delete %>	
+		   	<%= link_to 'Edit Video', edit_video_path(video) %> <br /><br />
+		   	<%= button_to 'Delete Video', video, :confirm => 'Are you sure?', :method => :delete %>	
 		   	<hr />
 		<% end %>
 	</div>
@@ -26,8 +26,8 @@
 		<h2>Stories</h2>
 		<% @stories.each do |story| %>
 			<%= truncate(story.body, :length => 75) %><br /><br />
-			<%= link_to "View Story", :controller => "stories", :action => "adminshow", :id => story.id %> | 
-			<%= link_to 'Delete Story', story, confirm: 'Are you sure you want to delete this story?', method: :delete %>
+			<%= link_to "View Story", :controller => "stories", :action => "adminshow", :id => story.id %> <br /><br />
+			<%= button_to 'Delete Story', story, :confirm => 'Are you sure?', :method => :delete %>
     		<br /><br /><hr />
 		<% end %>
 	</div>

@@ -1,5 +1,4 @@
-,,Setting,,,,Monsters,,,,,,Weather,,,,,Creatures,,,,Blood,,Victims
-Youtube ID,Title,Interior,City,Nature,Town,Slasher,Vampire,Zombie,Ghost,Other,none,Rain/cloudy,Fog,Heat/sun,Snow,none,Land,Water,Air,None,Yes,No,Yes,No
+Youtube ID,Title,Interior,City,Nature,Town,Slasher,Vampire,Zombie,Ghost,Other,none,Rain/cloudy,Fog,Heat/sun,Snow,none,Land,Water,Air,None,Blood - Yes,No,Victims - Yes,No
 39zVELGytWA,Wonderwheel,,,,X,,,,,,X,,,X,,,,,,X,,X,,X
 hbKgQRykLOw,web4,,,X,,,,,,,X,,X,,,,X,,,,,X,,X
 h2NACagypcc,web3,,,X,,,,,,,X,,X,,,,X,,,,,X,,X
@@ -7,12 +6,12 @@ cUyNhQlzjXU,web2,,,X,,,,,,,x,,x,,,,x,,,,,x,,x
 vhPajCRN0pY,web,,,x,,,,,,,x,,x,,,,x,,,,,x,,x
 QtxmeIbqTgU,shack4,,,x,,,,,,,x,x,,,,,,,,x,,x,,x
 AzN0yTynCak,shack3,,,x,,,,,,,x,x,,,,,,,,x,,x,,x
--auwtgAbii4,shack2,,,x,,,,,,,x,x,,,,,,,,x,,x,,x
+#NAME?,shack2,,,x,,,,,,,x,x,,,,,,,,x,,x,,x
 k93H-rCq5Hk,SC1,,,,X,,,,,,X,,,X,,,,,,X,,x,,x
 tLs9R3GeAsI,reaper4,,,,x,x,,,,,,,x,,,,,,,x,,x,,x
 xEsZQ_BQeD8,reaper3,,,,x,,,,,,x,,x,,,,,,,x,,x,,x
 Ug3ZMJN7Fhs,reaper2,,,x,,x,,,,,,,x,,,,,,,x,,x,,x
-42SygZP-zrg,reaper1,,,x,,x,,,,,,,x,,,,,,,x,,x,x
+42SygZP-zrg,reaper1,,,x,,x,,,,,,,x,,,,,,,x,,x,x,
 _Y0kUR7CWDA,houseNL,,,,x,,,,,,x,,x,,,,,,,x,,x,,x
 ydxxbnsyGDo,fog town3,,,,x,,,,,,x,,x,,,,,,,x,,x,,x
 A4KXWLgl3qs,fog town2,,,,x,,,,,,x,,x,,,,,,,x,,x,,x
@@ -20,7 +19,7 @@ A4KXWLgl3qs,fog town2,,,,x,,,,,,x,,x,,,,,,,x,,x,,x
 Idavf5merQw,fog hill,,,,x,,,,,,x,,x,,,,,,,x,,x,,x
 7voqYWq04ac,fog farm7,,,x,,,,,,,x,,x,,,,,,,x,,x,,x
 5FNTzXEXjiI,fog farm6,,,x,,,,,,,x,,x,,,,,,,x,,x,,x
--wkBPpebA_Y,fog farm5,,,x,,,,,,,x,,x,,,,,,,x,,x,,x
+#NAME?,fog farm5,,,x,,,,,,,x,,x,,,,,,,x,,x,,x
 N6Aj8rV4YPQ,fog farm4,,,x,,,,,,,x,,x,,,,,,,x,,x,,x
 UTpMyeG4_K0,fog farm3,,,x,,,,,,,x,,x,,,,x,,,,,x,,x
 ks1su_lr5MY,fog farm2,,,x,,,,,,,x,,x,,,,x,,,,,x,,x
@@ -35,11 +34,11 @@ NYgsFTuJDIk,windytree3,,,x,,,,,,,x,,,x,,,,,,x,,x,,x
 rOYghbbiQPU,windytree2,,,x,,,,,,,x,,,x,,,,,,x,,x,,x
 bVkH-FfKUGg,windytree,,x,,,,,,,,x,,,x,,,,,,x,,x,,x
 F7h6W6_fiLs,windygrass,,,x,,,,,,,x,,,x,,,,,,x,,x,,x
-4v-iDaf0ARU,watching,,,,x,x,,,,x,,,,x,,,,,,x,,x,x
-Z5FI6mzfFlE,closet,x,,,,,,,x,,,,,,,x,,,,x,,x,x
--q0X6cmHCDQ,turkeys,,,x,,,,,,,x,,,x,,,x,,,,,x,,x
+4v-iDaf0ARU,watching,,,,x,x,,,,x,,,,x,,,,,,x,,x,x,
+Z5FI6mzfFlE,closet,x,,,,,,,x,,,,,,,x,,,,x,,x,x,
+#NAME?,turkeys,,,x,,,,,,,x,,,x,,,x,,,,,x,,x
 w76XzuVXnBY,TreesRain,,,x,,,,,,,x,x,,,,,,,,x,,x,,x
-QHvPZJe9bSQ,trees,,,x,,,,,,,x,x,,,,,,,,x,,x,x
+QHvPZJe9bSQ,trees,,,x,,,,,,,x,x,,,,,,,,x,,x,x,
 oMTrghV0RgY,tree,,,,x,,,,,,x,,,x,,,,,,x,,x,,x
 d_cej89lc3Q,trains,,x,,,,,,,,x,,,x,,,,,,x,,x,,x
 ibOaHKNPPKM,sunset,,,x,,,,,,,x,,,x,,,x,,,,,x,,x
@@ -53,7 +52,7 @@ qanvQ7fMnPM,shootthefreaks,,x,,,,,,,,x,,,x,,,,,,x,,x,,x
 YrwYP9J5HBg,whitehouse,,,,x,,,,,,x,,x,,,,,,,x,,x,,x
 d6qLk5--QM4,turkeysrunning,,,,x,,,,,,x,,x,,,,x,,,,,x,,x
 Rswcy5aJc74,turkeys2,,,,x,,,,,,x,,x,,,,x,,,,,x,,x
-_IA4hJlsj5A,skyhair,,,x,,,,,,,x,x,,,,,,,,x,,x,x
+_IA4hJlsj5A,skyhair,,,x,,,,,,,x,x,,,,,,,,x,,x,x,
 6pC2hmDH9gk,rainwindowcityangel,x,x,,,,,,,,x,x,,,,,,,,x,,x,,x
 uE7tc7Cgy4o,rainwindowcity,x,x,,,,,,,,x,x,,,,,,,,x,,x,,x
 vMH1EeNlmxc,porchswing2,,,,x,,,,x,,,,x,,,,,,,x,,x,,x
@@ -64,7 +63,7 @@ QNKTX82TVjI,moon bay,,,,x,,,,,,x,,,x,,,,,,x,,x,,x
 03uaLGOU8xQ,house bird,,,,x,,,,,,x,,,x,,,,,x,,,x,,x
 dHVXkJtwNZg,trees,,,x,,,,,,,x,,,x,,,,,,x,,x,,x
 flKv8IG8HEU,taxidermy1,x,,,,,,,,,x,,,,,x,x,,x,,,x,,x
-x-yE20PlDzY,ghostwindow,,x,,x,,,,x,,,x,,,,,,,,x
+x-yE20PlDzY,ghostwindow,,x,,x,,,,x,,,x,,,,,,,,x,,,,
 lBQmv3A7kC8,ghost livingroom,x,,,,,,,x,,,,,,,x,,,,x,,x,,x
 xsEK0UsqiHo,door creak2,x,,,,,,,,,x,,,,,x,,,,x,,x,,x
 508qtVDHZz8,door creak,x,,,,,,,,,x,,,,,x,,,,x,,x,,x
@@ -88,17 +87,17 @@ x23y6HHzBkY,deer,,,,x,,,,,,x,x,,,,,x,,,,,x,,x
 zjk-UM6fUzI,zombie2,,,x,,,,x,,,,,,x,,,,,,x,,x,,x
 YKp7toJUqpA,zombie,,,x,,,,x,,,,,,x,,,,,,x,,x,,x
 gabA5qTlq7w,wind-drapes,x,,,,,,,x,,,,,,,x,,,,x,,x,,x
-bEtbU-66VLw,victim3b,x,,,,,,,x,,,,,,,x,,,,x,,x,x
-iFadwdHX7xw,victim3,x,,,,,,,x,,,,,,,x,,,,x,,x,x
-iqHQY3SpNuo,victim2,x,,,,,,,x,,,,,,,x,,,,x,x,,x
-6P1fE8GtZ58,victim,x,,,,,,,,,x,,,,,x,,,,x,x,,x
+bEtbU-66VLw,victim3b,x,,,,,,,x,,,,,,,x,,,,x,,x,x,
+iFadwdHX7xw,victim3,x,,,,,,,x,,,,,,,x,,,,x,,x,x,
+iqHQY3SpNuo,victim2,x,,,,,,,x,,,,,,,x,,,,x,x,,x,
+6P1fE8GtZ58,victim,x,,,,,,,,,x,,,,,x,,,,x,x,,x,
 clgLf34Ujxg,taxidermy bird,x,,,,,,,,,x,,,,,x,,,x,,,x,,x
 3rMosklGG_4,roofs,,,,x,,,,,,x,x,,,,,,,,x,,x,,x
 9nHv0vaK15E,ghostwindow2,x,,,,,,,x,,,,,,,x,,,,x,,x,,x
 NRuEgBd3-iQ,ghoststairs,x,,,,,,,x,,,,,,,x,,,,x,,x,,x
-bSFQYB1pa3U,ghostly,x,,,,,,,x,,,,,,,x,,,,x,,x,x
+bSFQYB1pa3U,ghostly,x,,,,,,,x,,,,,,,x,,,,x,,x,x,
 lGXdvZQ7j2E,ghost,x,,,,,,,x,,,,,,,x,,,,x,,x,,x
-k3BXnno5IvA,ghost-window2,,,,x,,,,x,,,x,,,,,,,,x,,x,x
+k3BXnno5IvA,ghost-window2,,,,x,,,,x,,,x,,,,,,,,x,,x,x,
 JeOfxMevdjU,ghost-chandleir,x,,,,,,,x,,,,,,,x,,,,x,,x,,x
 9eVL3ESBxGI,drip-knob,x,,,,,,,,,x,,,,,x,,,,x,x,,,x
 YLrWvIqIo6w,chandelierswing,x,,,,,,,x,,,,,,,x,,,,x,,x,,x

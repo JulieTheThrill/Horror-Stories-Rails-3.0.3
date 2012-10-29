@@ -8,10 +8,13 @@ class VideosController < ApplicationController
     Video.delete_all
     @cats = [0,0,1,2,3,4,6,7,8,9,10,11,13,14,15,16,17,19,20,21,22,24,25,27,28]
     puts 'HEEELLLLOOOOO'
-    CSV.foreach("#{Rails.root}/public/csvfile.csv") do |row|
+    
+    @csv = CSV.open("#{Rails.root}/public/csvfile.csv", "r")
+    @csv.shift
+    @csv.each do|row| 
       @video = Video.create(:title => row[0])
       puts @video.title
-      23.times do |i|
+      25.times do |i|
         if (row[i] == 'x' or row[i] == 'X')
             puts Category.find_by_id(@cats[i]).inspect
             @video.categories << Category.find_by_id(@cats[i])

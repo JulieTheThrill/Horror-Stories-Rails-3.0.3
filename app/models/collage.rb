@@ -16,17 +16,13 @@ class Collage < ActiveRecord::Base
   def generate_collage
     categories.delete_all
     selected_categories = category_list.nil? ? [] : category_list.keys.collect{|id| Category.find_by_id(id)}
-    all_videos = Array.new
-    selected_categories.each {
-      |category| 
+    selected_categories.each do |category| 
+      if videos.length < 20  #add the missing videos to get to 20
+        missing_videos = 20 - videos.length  
         self.categories << category
-        all_videos << category.videos
-      }
-    if all_videos.length < 20  #add the missing videos to get to 20
-      missing_videos = 20 - all_videos.length 
-      all_videos << Video.find(:all, :limit => missing_videos)
+        videos << Video.joins(:categories).where({:categories => {:id => category}}).limit(missing_videos)
+      end
     end 
-    videos << all_videos
   end
   
 end
